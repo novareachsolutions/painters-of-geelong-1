@@ -58,23 +58,11 @@
     .btn-primary:hover { background-position: 100% 0; transform: scale(1.05); box-shadow: 0 4px 24px rgba(232, 118, 45, 0.45); }
     .btn-dark { background: #1b3a5c; color: #fff; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-size: 14.5px; font-weight: 600; display: flex; align-items: center; gap: 9px; }
 
-    /* RATINGS */
-    .hero-ratings { display: flex; align-items: center; gap: 36px; }
-    .rating-block { display: flex; flex-direction: column; gap: 3px; }
-    .rating-label { font-size: 10.5px; font-weight: 700; color: #aaa; letter-spacing: 0.8px; text-transform: uppercase; }
-    .rating-brand { font-size: 21px; font-weight: 800; color: #111; letter-spacing: -0.5px; font-style: italic; }
-    .stars-row { display: flex; align-items: center; gap: 3px; }
-    .stars-row i { font-size: 13px; color: #f59e0b; }
-    .stars-row i.empty { color: #d8d8d8; }
-    .rating-score { font-size: 12.5px; font-weight: 600; color: #666; margin-left: 2px; }
-    .ratings-divider { width: 1px; height: 52px; background: #d5d5e0; }
-    .logopilot-block { display: flex; align-items: center; gap: 14px; }
-    .logopilot-icon { font-size: 26px; color: #16a34a; }
-    .logopilot-text { display: flex; flex-direction: column; gap: 3px; }
-    .logopilot-name { font-size: 15px; font-weight: 800; letter-spacing: 1.5px; color: #111; }
-    .logopilot-rating-row { display: flex; align-items: center; gap: 6px; }
-    .logopilot-score { font-size: 12.5px; font-weight: 700; color: #555; }
-    .green-stars i { font-size: 12px; color: #16a34a; }
+    /* MATERIAL USED */
+    .hero-ratings { display: flex; align-items: center; gap: 14px; }
+    .material-label { font-size: 10.5px; font-weight: 700; color: #aaa; letter-spacing: 0.8px; text-transform: uppercase; }
+    .material-logo { height: 40px; width: auto; object-fit: contain; }
+    .material-name { font-size: 14px; font-weight: 700; color: #1b3a5c; letter-spacing: 0.5px; }
 
     /* RIGHT IMAGE */
     .hero-right { flex: 1; position: relative; border-radius: 20px; overflow: hidden; background: #f5f5f5; display: flex; align-items: flex-end; justify-content: center; }
@@ -669,36 +657,10 @@
       </div>
 
       <div class="hero-ratings">
-        <div class="rating-block">
-          <span class="rating-label">Reviewed on</span>
-          <span class="rating-brand">IPSUM</span>
-          <div class="stars-row">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-regular fa-star empty"></i>
-            <span class="rating-score">4.5 Rating</span>
-          </div>
-        </div>
-
-        <div class="ratings-divider"></div>
-
-        <div class="logopilot-block">
-          <span class="logopilot-icon"><i class="fa-solid fa-asterisk"></i></span>
-          <div class="logopilot-text">
-            <span class="logopilot-name">LOGOPILOT</span>
-            <div class="logopilot-rating-row">
-              <span class="logopilot-score">5.0 RATING</span>
-              <div class="green-stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
-          </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:4px;">
+          <span class="material-label">Material Used</span>
+          <img src="images/dulux.png" alt="Dulux" class="material-logo" />
+          <span class="material-name">Paint</span>
         </div>
       </div>
     </div>
