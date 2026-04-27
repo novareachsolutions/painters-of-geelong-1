@@ -123,6 +123,21 @@
     .step-cta-heading { font-size: 24px; font-weight: 700; line-height: 1.3; margin-bottom: 20px; }
     .btn-book { display: inline-flex; align-items: center; gap: 8px; background: #e8762d; color: #fff; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-size: 15px; font-weight: 600; width: fit-content; }
 
+    /* OUR WORK */
+    .our-work { padding: 80px 64px; background: #fff; }
+    .our-work-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 48px; }
+    .our-work-top .section-badge { justify-content: flex-start; margin-bottom: 14px; }
+    .our-work-heading { font-size: 42px; font-weight: 700; color: #0f0f14; line-height: 1.2; letter-spacing: -0.5px; }
+    .work-arrows { display: flex; gap: 12px; flex-shrink: 0; }
+    .work-arrow { width: 52px; height: 52px; border-radius: 50%; border: 1.5px solid #d5d6de; background: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 18px; color: #333; transition: all 0.2s; }
+    .work-arrow:hover { background: #f3f4f8; border-color: #bbb; }
+    .work-carousel-wrap { overflow: hidden; }
+    .work-carousel { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -ms-overflow-style: none; scrollbar-width: none; padding-bottom: 4px; }
+    .work-carousel::-webkit-scrollbar { display: none; }
+    .work-card { position: relative; display: block; flex: 0 0 calc((100% - 40px) / 3); border-radius: 16px; overflow: hidden; aspect-ratio: 4 / 3; background: #f3f4f8; cursor: pointer; text-decoration: none; color: inherit; scroll-snap-align: start; }
+    .work-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); }
+    .work-card:hover img { transform: scale(1.06); }
+
     /* OUR SERVICES */
     .our-services { padding: 80px 64px; background: #f3f4f8; }
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -217,9 +232,15 @@
     .testimonials-stat { display: flex; flex-direction: column; gap: 4px; }
     .testimonials-stat-number { font-size: 48px; font-weight: 800; color: #0f0f14; letter-spacing: -1.5px; }
     .testimonials-stat-label { font-size: 15px; color: #777; font-weight: 500; }
-    .testimonials-logos { display: flex; align-items: center; gap: 48px; }
+    .testimonials-logos { display: flex; align-items: center; gap: 28px; }
     .logo-item { display: flex; align-items: center; gap: 10px; color: #333; font-size: 20px; font-weight: 700; }
     .logo-item i { font-size: 28px; color: #444; }
+    .hipages-cta { display: flex; align-items: center; gap: 24px; }
+    .hipages-cta-text { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 22px; font-weight: 700; color: #0f0f14; line-height: 1.35; }
+    .hipages-cta-text i { color: #f5b301; font-size: 24px; flex-shrink: 0; }
+    .hipages-cta-logo { height: 34px; width: auto; display: inline-block; vertical-align: middle; }
+    .hipages-cta-btn { display: inline-flex; align-items: center; gap: 8px; background: #e8762d; color: #fff; padding: 13px 24px; border-radius: 50px; text-decoration: none; font-size: 15px; font-weight: 600; white-space: nowrap; transition: background 0.2s; }
+    .hipages-cta-btn:hover { background: #d6651c; }
     .testimonial-content { display: flex; align-items: center; gap: 48px; position: relative; overflow: hidden; }
     .testimonial-slide { display: flex; align-items: center; gap: 48px; width: 100%; transition: opacity 0.4s ease, transform 0.4s ease; }
     .testimonial-slide.hidden { display: none; }
@@ -328,6 +349,10 @@
       .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
       .our-services { padding: 60px 24px; }
       .services-grid { gap: 16px; }
+      .our-work { padding: 60px 24px; }
+      .our-work-heading { font-size: 34px; }
+      .work-carousel { gap: 16px; }
+      .work-card { flex-basis: calc((100% - 32px) / 3); }
       .why-section { padding: 60px 24px; }
       .why-inner { gap: 40px; }
       .why-heading { font-size: 34px; }
@@ -380,6 +405,11 @@
       .step-card, .step-cta { min-height: 220px; padding: 24px 22px; }
       .our-services { padding: 48px 20px; }
       .services-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .our-work { padding: 48px 20px; }
+      .our-work-top { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .our-work-heading { font-size: 28px; }
+      .work-carousel { gap: 14px; }
+      .work-card { flex-basis: calc((100% - 14px) / 2); }
       .why-section { padding: 48px 20px; }
       .why-inner { grid-template-columns: 1fr; gap: 36px; }
       .why-heading { font-size: 30px; }
@@ -397,6 +427,8 @@
       .testimonial-img { width: 100%; height: 360px; }
       .testimonial-quote { font-size: 24px; }
       .testimonials-logos { flex-wrap: wrap; gap: 20px; }
+      .hipages-cta { flex-wrap: wrap; gap: 16px; }
+      .hipages-cta-text { max-width: none; }
       .blogs-section { padding: 48px 20px; }
       .blogs-header { flex-direction: column; align-items: flex-start; gap: 20px; }
       .blogs-grid { flex-direction: column; }
@@ -450,6 +482,10 @@
       .step-cta-heading { font-size: 19px; }
       .our-services { padding: 40px 16px; }
       .services-grid { grid-template-columns: 1fr; gap: 12px; }
+      .our-work { padding: 40px 16px; }
+      .our-work-heading { font-size: 24px; }
+      .work-carousel { gap: 12px; }
+      .work-card { flex-basis: 85%; }
       .why-section { padding: 40px 16px; }
       .why-inner { gap: 28px; }
       .why-heading { font-size: 26px; }
@@ -681,6 +717,13 @@
           <span class="material-label">Warranty</span>
           <span style="font-size:28px;font-weight:800;color:#1b3a5c;line-height:1;">10 Years</span>
         </div>
+        <div style="width:1px;height:52px;background:#d5d5e0;"></div>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:4px;">
+          <span class="material-label">5 Star Reviews</span>
+          <a href="https://hipages.com.au/connect/paintersofgeelong" target="_blank" rel="noopener" aria-label="See our 5-star reviews on hipages" style="display:inline-flex;">
+            <img src="images/logo/hipage.png" alt="hipages — 5-star reviews" class="material-logo" />
+          </a>
+        </div>
       </div>
     </div>
 
@@ -767,6 +810,50 @@
           <h3 class="step-cta-heading">Get a Free Painting Quote Today — Transform Your Space!</h3>
           <a href="#" class="btn-book">Book Now <i class="fa-solid fa-arrow-up-right"></i></a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR WORK -->
+  <section class="our-work">
+    <div class="our-work-top">
+      <div>
+        <div class="section-badge" style="justify-content: flex-start;">
+          <i class="fa-solid fa-sparkles"></i>
+          <span>Our Work</span>
+        </div>
+        <h2 class="our-work-heading">Transform Your Space With Our<br>High-quality Painting Work</h2>
+      </div>
+      <div class="work-arrows">
+        <button class="work-arrow" aria-label="Previous work" onclick="scrollWork(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="work-arrow" aria-label="Next work" onclick="scrollWork(1)"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <div class="work-carousel-wrap">
+      <div class="work-carousel" id="workCarousel">
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog1.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog 3.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog4.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog 5.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog 6.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog 9.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog10.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog11.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog 12.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog13.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog 15.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog 18.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog19.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog20.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog 22.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog 2.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog 7.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog 8.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog 14.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog 16.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog 17.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
+        <a href="projects.html" class="work-card"><img src="images/pog-work/pog 21.webp" alt="Painting project by Painters of Geelong" loading="lazy" /></a>
       </div>
     </div>
   </section>
@@ -966,23 +1053,27 @@
   <section class="testimonials-section">
     <div class="testimonials-top">
       <div class="testimonials-stat">
-        <span class="testimonials-stat-number">5095+</span>
+        <span class="testimonials-stat-number" data-target="550">0+</span>
         <span class="testimonials-stat-label">Happy Customers & Counting</span>
       </div>
-      <div class="testimonials-logos">
-        <div class="logo-item"><i class="fa-solid fa-bolt"></i> Logo Ipsum</div>
-        <div class="logo-item"><i class="fa-solid fa-wind"></i> Logo Ipsum</div>
-        <div class="logo-item"><i class="fa-solid fa-globe"></i> Logo Ipsum</div>
+      <div class="hipages-cta">
+        <div class="hipages-cta-text">
+          <i class="fa-solid fa-star"></i>
+          <span>5-Star Rating on</span>
+          <img src="images/logo/hipage.png" alt="hipages" class="hipages-cta-logo" />
+          <span>Verified Reviews</span>
+        </div>
+        <a href="https://hipages.com.au/connect/paintersofgeelong" target="_blank" rel="noopener" class="hipages-cta-btn">Check Now <i class="fa-solid fa-arrow-up-right"></i></a>
       </div>
     </div>
 
     <div class="testimonial-content">
       <div class="testimonial-slide" data-slide="0">
-        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=85&auto=format&fit=crop" alt="Sarah Johnson" class="testimonial-img" />
+        <img src="images/pog-work/pog 6.webp" alt="Painting project in Hamlyn Heights" class="testimonial-img" />
         <div class="testimonial-text-wrap">
-          <p class="testimonial-quote">"The painters did an excellent job on our home from start to finish. The work was clean with sharp lines, no mess left behind, and everything was completed ahead of schedule. We highly recommend their residential painting services."</p>
-          <h4 class="testimonial-name">Sarah Mitchell</h4>
-          <span class="testimonial-role">Homeowner — Highton</span>
+          <p class="testimonial-quote">"Very happy with Painters of Geelong! We did the whole interior of my house in under a week, the quality of the job is great, and good value competitive pricing!"</p>
+          <h4 class="testimonial-name">Bree</h4>
+          <span class="testimonial-role">Homeowner — Hamlyn Heights, VIC</span>
           <div class="testimonial-arrows">
             <button class="testimonial-arrow" onclick="changeTestimonial(-1)"><i class="fa-solid fa-arrow-left"></i></button>
             <button class="testimonial-arrow" onclick="changeTestimonial(1)"><i class="fa-solid fa-arrow-right"></i></button>
@@ -990,11 +1081,11 @@
         </div>
       </div>
       <div class="testimonial-slide hidden" data-slide="1">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=85&auto=format&fit=crop" alt="Michael Torres" class="testimonial-img" />
+        <img src="images/pog-work/pog 16.webp" alt="Painting project in Belmont" class="testimonial-img" />
         <div class="testimonial-text-wrap">
-          <p class="testimonial-quote">"We hired them for our office repaint and the results were outstanding. Professional, efficient, and minimal disruption to our business operations."</p>
-          <h4 class="testimonial-name">David Chen</h4>
-          <span class="testimonial-role">Business Owner — Belmont</span>
+          <p class="testimonial-quote">"They were professional, friendly, detail-oriented, and delivered a high-quality finish. Clean workspace, punctual, and easy to communicate with. Highly recommend."</p>
+          <h4 class="testimonial-name">Yaso</h4>
+          <span class="testimonial-role">Homeowner — Belmont, VIC</span>
           <div class="testimonial-arrows">
             <button class="testimonial-arrow" onclick="changeTestimonial(-1)"><i class="fa-solid fa-arrow-left"></i></button>
             <button class="testimonial-arrow" onclick="changeTestimonial(1)"><i class="fa-solid fa-arrow-right"></i></button>
@@ -1002,11 +1093,35 @@
         </div>
       </div>
       <div class="testimonial-slide hidden" data-slide="2">
-        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&q=85&auto=format&fit=crop" alt="Emily Chen" class="testimonial-img" />
+        <img src="images/pog-work/pog 9.webp" alt="Painting project in Highton" class="testimonial-img" />
         <div class="testimonial-text-wrap">
-          <p class="testimonial-quote">"Their attention to detail is unmatched. The deck staining and exterior painting transformed our property completely. Great value for the quality of work."</p>
-          <h4 class="testimonial-name">Emma Richards</h4>
-          <span class="testimonial-role">Property Manager — Grovedale</span>
+          <p class="testimonial-quote">"Incredibly professional and the best painters I've come across in Geelong. Great work ethic, attention to detail, and pricing. Will definitely use again."</p>
+          <h4 class="testimonial-name">Ash P</h4>
+          <span class="testimonial-role">Homeowner — Highton, VIC</span>
+          <div class="testimonial-arrows">
+            <button class="testimonial-arrow" onclick="changeTestimonial(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="testimonial-arrow" onclick="changeTestimonial(1)"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-slide hidden" data-slide="3">
+        <img src="images/pog-work/pog 21.webp" alt="Painting project in Geelong" class="testimonial-img" />
+        <div class="testimonial-text-wrap">
+          <p class="testimonial-quote">"Outstanding job. Professional, on time, great attention to detail, flawless finish, and clean work. Highly recommend."</p>
+          <h4 class="testimonial-name">Niloo</h4>
+          <span class="testimonial-role">Homeowner — Geelong, VIC</span>
+          <div class="testimonial-arrows">
+            <button class="testimonial-arrow" onclick="changeTestimonial(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="testimonial-arrow" onclick="changeTestimonial(1)"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-slide hidden" data-slide="4">
+        <img src="images/pog-work/pog1.webp" alt="Painting project in Armstrong Creek" class="testimonial-img" />
+        <div class="testimonial-text-wrap">
+          <p class="testimonial-quote">"Nice professional guys, punctual, tidy, and did a great job of repainting our ceiling after storm damage. Would definitely hire again."</p>
+          <h4 class="testimonial-name">Simone H</h4>
+          <span class="testimonial-role">Homeowner — Armstrong Creek, VIC</span>
           <div class="testimonial-arrows">
             <button class="testimonial-arrow" onclick="changeTestimonial(-1)"><i class="fa-solid fa-arrow-left"></i></button>
             <button class="testimonial-arrow" onclick="changeTestimonial(1)"><i class="fa-solid fa-arrow-right"></i></button>
@@ -1305,6 +1420,21 @@
       scrollTrigger: { trigger: '.testimonials-section', start: 'top 80%', toggleActions: 'play none none none' },
     });
 
+    // Customers counter
+    const customersEl = document.querySelector('.testimonials-stat-number[data-target]');
+    if (customersEl) {
+      const target = parseInt(customersEl.dataset.target);
+      gsap.to({ val: 0 }, {
+        val: target,
+        duration: 2,
+        ease: 'power1.out',
+        scrollTrigger: { trigger: '.testimonials-section', start: 'top 80%', toggleActions: 'play none none none' },
+        onUpdate: function () {
+          customersEl.textContent = Math.round(this.targets()[0].val) + '+';
+        }
+      });
+    }
+
     // Blogs section — header fade in + cards staggered slide up
     gsap.set('.blogs-header', { opacity: 0, y: 40 });
     gsap.to('.blogs-header', {
@@ -1325,6 +1455,20 @@
       slides[currentSlide].classList.add('hidden');
       currentSlide = (currentSlide + dir + slides.length) % slides.length;
       slides[currentSlide].classList.remove('hidden');
+    }
+
+    // Our Work carousel
+    function scrollWork(dir) {
+      const c = document.getElementById('workCarousel');
+      if (!c) return;
+      const card = c.querySelector('.work-card');
+      const gap = parseFloat(getComputedStyle(c).columnGap || getComputedStyle(c).gap) || 20;
+      const step = card ? card.offsetWidth + gap : 320;
+      const max = c.scrollWidth - c.clientWidth;
+      let target = c.scrollLeft + dir * step;
+      if (dir > 0 && c.scrollLeft >= max - 4) target = 0;
+      else if (dir < 0 && c.scrollLeft <= 4) target = max;
+      c.scrollTo({ left: target, behavior: 'smooth' });
     }
 
   </script>

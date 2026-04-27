@@ -7,7 +7,9 @@
       "Read(//Users/israaziz/renovator/**)",
       "Bash(python3 -c \":*)",
       "Bash(git commit:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git remote *)",
+      "Bash(webpinfo \"pog 2.webp\")"
     ],
     "additionalDirectories": [
       "/tmp"
