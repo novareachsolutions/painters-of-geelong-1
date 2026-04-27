@@ -12,7 +12,11 @@
       "Bash(webpinfo \"pog 2.webp\")",
       "Bash(gh auth *)",
       "Bash(gh repo *)",
-      "Bash(gh api *)"
+      "Bash(gh api *)",
+      "Read(//Users/israaziz/.config/gh/**)",
+      "Bash(git fetch *)",
+      "Bash(git pull *)",
+      "Bash(git stash *)"
     ],
     "additionalDirectories": [
       "/tmp"
