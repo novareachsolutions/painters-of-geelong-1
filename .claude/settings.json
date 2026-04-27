@@ -9,7 +9,10 @@
       "Bash(git commit:*)",
       "Bash(git add:*)",
       "Bash(git remote *)",
-      "Bash(webpinfo \"pog 2.webp\")"
+      "Bash(webpinfo \"pog 2.webp\")",
+      "Bash(gh auth *)",
+      "Bash(gh repo *)",
+      "Bash(gh api *)"
     ],
     "additionalDirectories": [
       "/tmp"
