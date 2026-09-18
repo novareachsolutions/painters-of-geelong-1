@@ -168,6 +168,17 @@
       },
     });
 
+    // Meet the team — content then media slide up
+    gsap.set(['.team-teaser-content', '.team-teaser-media'], { opacity: 0, y: 50 });
+    gsap.to('.team-teaser-content', {
+      opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
+      scrollTrigger: { trigger: '.team-teaser', start: 'top 80%', toggleActions: 'play none none none' },
+    });
+    gsap.to('.team-teaser-media', {
+      opacity: 1, y: 0, duration: 0.8, ease: 'power2.out', delay: 0.2,
+      scrollTrigger: { trigger: '.team-teaser', start: 'top 80%', toggleActions: 'play none none none' },
+    });
+
     // Testimonials section — fade in + slide up
     const testimonialsTop = '.testimonials-top';
     const testimonialContent = '.testimonial-content';

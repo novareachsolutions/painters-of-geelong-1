@@ -119,6 +119,26 @@
     .stat-number { font-size: 42px; font-weight: 700; color: #e8762d; line-height: 1; }
     .stat-label { font-size: 14px; color: #777; line-height: 1.4; }
 
+    /* OUR TEAM */
+    .our-team { padding: 80px 64px; background: #f3f4f8; }
+    .our-team-heading { text-align: center; font-size: 42px; font-weight: 700; color: #0f0f14; line-height: 1.2; margin-bottom: 24px; }
+    .our-team-intro { max-width: 820px; margin: 0 auto 48px; text-align: center; display: flex; flex-direction: column; gap: 14px; }
+    .our-team-intro p { font-size: 15px; color: #555; line-height: 1.7; }
+    .our-team-intro .our-team-lead { font-size: 18px; font-weight: 600; color: #0f0f14; }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .team-card { background: #fff; border-radius: 16px; padding: 32px 28px; display: flex; flex-direction: column; gap: 16px; }
+    .team-avatar { width: 56px; height: 56px; background: #e8762d; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 22px; font-weight: 700; flex-shrink: 0; }
+    .team-card-title { display: flex; flex-direction: column; gap: 4px; }
+    .team-card h3 { font-size: 22px; font-weight: 700; color: #0f0f14; }
+    .team-role { font-size: 12px; font-weight: 700; color: #e8762d; letter-spacing: 1.5px; text-transform: uppercase; }
+    .team-card p { font-size: 15px; color: #555; line-height: 1.65; }
+    .team-van { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; margin-top: 56px; padding-top: 56px; border-top: 1px solid #e0e2ea; }
+    .team-van-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .team-van-photos img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 16px; display: block; }
+    .team-van-content { display: flex; flex-direction: column; gap: 16px; }
+    .team-van-content h3 { font-size: 30px; font-weight: 700; color: #0f0f14; line-height: 1.25; }
+    .team-van-content p { font-size: 15px; color: #555; line-height: 1.7; }
+
     /* CORE VALUES */
     .core-values { padding: 80px 64px; background: #fff; }
     .core-values-heading { text-align: center; font-size: 42px; font-weight: 700; color: #0f0f14; line-height: 1.2; margin-bottom: 48px; }
@@ -202,6 +222,9 @@
       .our-story { padding: 60px 24px; }
       .our-story-grid { gap: 40px; }
       .our-story-img { height: 420px; }
+      .our-team { padding: 60px 24px; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .team-van { grid-template-columns: 1fr; gap: 32px; }
       .core-values { padding: 60px 24px; }
       .why-choose { padding: 60px 24px; }
       .why-choose-grid { gap: 40px; }
@@ -223,6 +246,8 @@
       .our-story-img { height: 340px; }
       .our-story-heading { font-size: 30px; }
       .stats-row { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .our-team-heading { font-size: 34px; }
+      .team-van-content h3 { font-size: 26px; }
       .values-grid { grid-template-columns: 1fr 1fr; }
       .core-values-heading { font-size: 34px; }
       .why-choose-heading { font-size: 34px; }
@@ -246,6 +271,14 @@
       .our-story-img { height: 280px; }
       .stats-row { grid-template-columns: repeat(2, 1fr); gap: 16px; }
       .stat-number { font-size: 32px; }
+      .our-team { padding: 40px 16px; }
+      .our-team-heading { font-size: 26px; }
+      .our-team-intro { margin-bottom: 32px; }
+      .team-grid { grid-template-columns: 1fr; }
+      .team-van { margin-top: 40px; padding-top: 40px; }
+      .team-van-photos { grid-template-columns: 1fr; }
+      .team-van-photos img { aspect-ratio: 16 / 9; }
+      .team-van-content h3 { font-size: 22px; }
       .core-values { padding: 40px 16px; }
       .core-values-heading { font-size: 26px; }
       .values-grid { grid-template-columns: 1fr; }
@@ -485,6 +518,65 @@
     </div>
   </section>
 
+  <!-- OUR TEAM -->
+  <section class="our-team" id="our-team">
+    <div class="section-badge">
+      <i class="fa-solid fa-star"></i>
+      <span>Meet the Team</span>
+    </div>
+    <h2 class="our-team-heading">Meet the Painters of Geelong Team</h2>
+    <div class="our-team-intro">
+      <p class="our-team-lead">Good painting work depends on the people doing the work.</p>
+      <p>Paris leads the Painters of Geelong team, working alongside Mosi, Alex and Kyle on residential and commercial painting projects across Geelong.</p>
+      <p>The team works through the different stages of each job together, from preparation and spraying through to rolling, cutting-in and applying the final coats. Everyone contributes where needed, with the same focus on doing the preparation properly and leaving behind a clean, well-finished result.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar" aria-hidden="true">P</div>
+        <div class="team-card-title">
+          <h3>Paris</h3>
+          <span class="team-role">Lead Painter</span>
+        </div>
+        <p>Paris leads the painting team and is involved throughout the job from start to finish. He works across preparation, spraying, rolling, cutting-in and finishing, while also keeping an eye on how the project is progressing and what needs to happen next.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" aria-hidden="true">M</div>
+        <div class="team-card-title">
+          <h3>Mosi</h3>
+          <span class="team-role">Painter</span>
+        </div>
+        <p>Mosi works alongside the team across the hands-on stages of each project. His work includes surface preparation, rolling and general painting work, helping the team move smoothly from one stage of the job to the next.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" aria-hidden="true">A</div>
+        <div class="team-card-title">
+          <h3>Alex</h3>
+          <span class="team-role">Painter</span>
+        </div>
+        <p>Alex works across different parts of the painting process, including spraying, rolling and cutting-in. He gets involved wherever the job requires, whether that is helping with preparation or working through the main painting stages.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" aria-hidden="true">K</div>
+        <div class="team-card-title">
+          <h3>Kyle</h3>
+          <span class="team-role">Painter</span>
+        </div>
+        <p>Kyle works with the team across painting and finishing work. His role includes cutting-in, applying coats and helping with the smaller details that contribute to a neat, consistent finish.</p>
+      </div>
+    </div>
+    <div class="team-van">
+      <div class="team-van-photos">
+        <img src="images/painters-of-geelong-team-vehicle-side-view.webp" alt="Painters of Geelong Toyota HiAce van parked on a Geelong street, side view" width="1280" height="720" loading="lazy" decoding="async" />
+        <img src="images/painters-of-geelong-team-vehicle-rear-view.webp" alt="Rear view of the Painters of Geelong Toyota HiAce van showing interior, exterior and repaint services" width="1280" height="720" loading="lazy" decoding="async" />
+      </div>
+      <div class="team-van-content">
+        <h3>On the Road Around Geelong</h3>
+        <p>Our Toyota HiAce is used by the team every day to travel between painting projects across Geelong and carry the equipment and materials needed on site.</p>
+        <p>You may see the Painters of Geelong van around local homes and job sites throughout the area. It is simply part of the day-to-day work that keeps the team moving between projects and ready for each job.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- CORE VALUES -->
   <section class="core-values">
     <div class="section-badge">
@@ -707,6 +799,34 @@
       {
         opacity: 1, x: 0, duration: 1, ease: 'power2.out',
         scrollTrigger: { trigger: '.our-story', start: 'top 75%' }
+      }
+    );
+
+    // Team cards — staggered fade up
+    gsap.utils.toArray('.team-card').forEach(function(card, i) {
+      gsap.fromTo(card,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
+          scrollTrigger: { trigger: card, start: 'top 85%' },
+          delay: i * 0.1
+        }
+      );
+    });
+
+    // Team van — photos then text fade up
+    gsap.fromTo('.team-van-photos',
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
+        scrollTrigger: { trigger: '.team-van', start: 'top 80%' }
+      }
+    );
+    gsap.fromTo('.team-van-content',
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1, y: 0, duration: 0.8, ease: 'power2.out', delay: 0.15,
+        scrollTrigger: { trigger: '.team-van', start: 'top 80%' }
       }
     );
 
