@@ -138,6 +138,9 @@
     .service-img-card:hover img { transform: scale(1.08); }
     .service-card { border: 1px solid #e2e3ea; background: linear-gradient(to bottom, #edeef2 0%, #f3f4f8 50%, #fff 50%, #fff 100%); border-radius: 16px; padding: 32px 28px; display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; background-size: 100% 200%; background-position: bottom; transition: background-position 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
     .service-card:hover { background-position: top; }
+    .service-card { position: relative; }
+    .service-card-link { color: inherit; text-decoration: none; }
+    .service-card-link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: 1; }
     .service-card .service-link { opacity: 0; transform: translateY(10px); transition: opacity 0.4s ease, transform 0.4s ease; }
     .service-card:hover .service-link { opacity: 1; transform: translateY(0); }
     .service-card.grey { background: linear-gradient(to bottom, #edeef2 0%, #f3f4f8 50%, #fff 50%, #fff 100%); background-size: 100% 200%; background-position: bottom; border: 1px solid #e2e3ea; transition: background-position 0.6s cubic-bezier(0.4, 0, 0.2, 1); }

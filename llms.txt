@@ -1,0 +1,83 @@
+# llms.txt for Painters of Geelong
+
+# Painters of Geelong
+
+> Painters of Geelong is a local, owner-operated house and commercial painting company based in Armstrong Creek, Victoria, with 25+ years of experience serving Geelong and surrounding suburbs. Services span interior and exterior house painting, commercial painting, deck and timber staining, and surface preparation/pressure cleaning, backed by Dulux premium paints, a 10-year workmanship warranty, free itemised quotes, and 5-star reviews on hipages.
+
+## Entity Attributes
+- **Business Name:** Painters of Geelong
+- **Years of Experience:** 25+ years
+- **Business Type:** Local, owner-operated house and commercial painting company
+- **Paint Supplier:** Dulux (premium paints)
+- **Warranty:** 10-year workmanship warranty
+- **Customers Served:** 300+ satisfied customers across the Geelong region
+- **Satisfaction Rate:** 100% satisfaction guaranteed (as stated on-site)
+- **Reviews:** 5-star rated on hipages
+- **Phone:** 0431 261 281
+- **Email:** Paintersofgeelong@outlook.com
+- **Address:** Armstrong Creek, VIC 3217
+- **Working Hours:** Monday to Saturday, 7am–7pm; closed Sunday
+
+## Team
+- **Paris** — Lead Painter
+- **Mosi** — Painter
+- **Alex** — Painter
+- **Kyle** — Painter
+
+Full team introduction: [About Us](https://www.paintersofgeelong.com.au/about-us.html#our-team)
+
+## Social Profiles
+Facebook: https://www.facebook.com/paintersofgeelongau
+Instagram: https://www.instagram.com/paintersofgeelong/
+Google Reviews: https://search.google.com/local/writereview?placeid=ChIJ8fnM1F8w0QMRTr1CSzulIe8
+hipages Profile: https://hipages.com.au/connect/paintersofgeelong
+
+## Business Overview
+- [Home](https://www.paintersofgeelong.com.au/): Overview of Painters of Geelong's house and commercial painting services, process, service areas, and team.
+- [About Us](https://www.paintersofgeelong.com.au/about-us.html): Company background and team introduction — Paris (Lead Painter), Mosi, Alex, and Kyle.
+- [Services](https://www.paintersofgeelong.com.au/services.html): Overview of all five painting service categories offered.
+- [Projects](https://www.paintersofgeelong.com.au/projects.html): Gallery of completed residential and commercial painting projects across Geelong.
+- [Contact Us](https://www.paintersofgeelong.com.au/contact-us.html): Contact form and booking page for free quotes and appointments.
+
+## Core Services
+- [Interior House Painting](https://www.paintersofgeelong.com.au/services/interior-house-painters.html): Interior painting covering walls, ceilings, doors and trims, feature walls, and apartment painting. Pricing: full 3-bedroom interior repaint $5,000–$9,500; single rooms from ~$400; apartments from $2,500 (1-bedroom $2,500–$4,000, 2-bedroom $3,500–$5,500). Typical turnaround 2–5 days.
+- [Exterior House Painting](https://www.paintersofgeelong.com.au/services/exterior-house-painters.html): Exterior painting covering weatherboard, brick, fences, garage doors and trims, and outdoor facades, using weather-resistant paint systems. Pricing: full single-storey exterior repaint $7,000–$14,000. Typical turnaround 5–9 days.
+- [Commercial Painting](https://www.paintersofgeelong.com.au/services/commercial-building-painters.html): Commercial painting for offices, shops and retail stores, warehouses, restaurants and cafés, and strata/property management, completed with minimal disruption to business operations.
+- [Deck & Timber Staining](https://www.paintersofgeelong.com.au/services/deck-and-timber-staining.html): Deck staining, timber sealing, pergola painting, fence staining, and timber restoration for outdoor timber surfaces.
+- [Surface Prep & Pressure Cleaning](https://www.paintersofgeelong.com.au/services/pressure-washing-surface-prep.html): Pressure washing, surface cleaning, sanding and priming, crack and hole filling, and minor repairs/patching as standalone or pre-painting preparation services.
+
+## Service Areas
+- [Areas of Service Overview](https://www.paintersofgeelong.com.au/areas-of-service.html): Hub page for all nine suburbs serviced across Geelong and surrounds.
+- [Painters Highton](https://www.paintersofgeelong.com.au/areas-of-service/painters-highton.html): Local painting services in Highton.
+- [Painters Belmont](https://www.paintersofgeelong.com.au/areas-of-service/painters-belmont.html): Local painting services in Belmont.
+- [Painters Newtown](https://www.paintersofgeelong.com.au/areas-of-service/painters-newtown.html): Local painting services in Newtown.
+- [Painters Grovedale](https://www.paintersofgeelong.com.au/areas-of-service/painters-grovedale.html): Local painting services in Grovedale.
+- [Painters Lara](https://www.paintersofgeelong.com.au/areas-of-service/painters-lara.html): Local painting services in Lara.
+- [Painters Ocean Grove](https://www.paintersofgeelong.com.au/areas-of-service/painters-ocean-grove.html): Local painting services in Ocean Grove.
+- [Painters Armstrong Creek](https://www.paintersofgeelong.com.au/areas-of-service/painters-armstrong-creek.html): Local painting services in Armstrong Creek, the company's home suburb.
+- [Painters Torquay](https://www.paintersofgeelong.com.au/areas-of-service/painters-torquay.html): Local painting services in Torquay.
+- [Painters Waurn Ponds](https://www.paintersofgeelong.com.au/areas-of-service/painters-waurn-ponds.html): Local painting services in Waurn Ponds.
+
+## Guides — Interior House Painting in Geelong (pillar + supporting articles)
+- [Interior House Painting in Geelong: The Complete Homeowner's Guide](https://www.paintersofgeelong.com.au/blogs/interior-house-painting-geelong-guide.html): Pillar guide covering local costs, room-by-room pricing, the professional process, and DIY vs hiring.
+- [Interior Painting Cost in Geelong: 2026 Prices by Room & Home Size](https://www.paintersofgeelong.com.au/blogs/interior-house-painting-geelong-guide/interior-painting-cost-geelong.html): Detailed interior painting pricing by room and home size.
+- [Interior Wall Painting: Prep, Sheens, Whites & Streak-Free Technique](https://www.paintersofgeelong.com.au/blogs/interior-house-painting-geelong-guide/interior-wall-painting-geelong.html): Technical guide to wall preparation, paint sheens, and technique.
+- [Ceiling Painting: The Job Everyone Skips (and Why It Shows)](https://www.paintersofgeelong.com.au/blogs/interior-house-painting-geelong-guide/ceiling-painting-geelong.html): Guide to ceiling painting specifics and common mistakes.
+- [Door & Trim Painting: Skirting, Architraves & Brush-Mark-Free Doors](https://www.paintersofgeelong.com.au/blogs/interior-house-painting-geelong-guide/door-and-trim-painting-geelong.html): Guide to trim, skirting, and door painting technique.
+- [Feature Wall Painting: How to Add Drama Without Repainting the House](https://www.paintersofgeelong.com.au/blogs/interior-house-painting-geelong-guide/feature-wall-painting-geelong.html): Guide to feature wall colour and design choices.
+- [Apartment Painting: What's Different About Painting a Unit (and What It Costs)](https://www.paintersofgeelong.com.au/blogs/interior-house-painting-geelong-guide/apartment-painting-geelong.html): Guide to apartment-specific painting considerations and costs.
+- [How to Choose the Best Interior House Painters in Geelong](https://www.paintersofgeelong.com.au/blogs/interior-house-painting-geelong-guide/best-interior-house-painters-geelong.html): Guide to vetting and comparing interior painting quotes and contractors.
+- [DIY vs Professional Interior Painting: The Honest Maths](https://www.paintersofgeelong.com.au/blogs/interior-house-painting-geelong-guide/diy-vs-professional-interior-painting.html): Cost and time comparison between DIY and professional interior painting.
+- [Interior Painting Tips & Hacks: 12 Habits the Pros Swear By](https://www.paintersofgeelong.com.au/blogs/interior-house-painting-geelong-guide/interior-house-painting-tips.html): Professional interior painting tips and techniques.
+
+## Guides — Exterior House Painting in Geelong (pillar + supporting articles)
+- [Exterior House Painting in Geelong: The Complete Guide](https://www.paintersofgeelong.com.au/blogs/exterior-house-painting-geelong-guide.html): Pillar guide covering weatherboard, brick, fences, garage doors, facades, cost, lifespan, and paint systems for local weather conditions.
+- [Exterior Painting Prices by Job Type and Home Size](https://www.paintersofgeelong.com.au/blogs/exterior-house-painting-geelong-guide/exterior-painting-cost-geelong.html): Detailed exterior painting pricing by job type and home size.
+- [Weatherboard Painting in Geelong: Prep, Paint & Repaint-or-Replace](https://www.paintersofgeelong.com.au/blogs/exterior-house-painting-geelong-guide/weatherboard-painting-geelong.html): Guide to weatherboard preparation, paint choice, and repaint-vs-replace decisions.
+- [Brick Painting Geelong: Should You Paint Your Brick At All?](https://www.paintersofgeelong.com.au/blogs/exterior-house-painting-geelong-guide/brick-painting-geelong.html): Guide to the decision and process of painting brick exteriors.
+- [Choosing an Exterior Painter in Geelong: The Full Checklist](https://www.paintersofgeelong.com.au/blogs/exterior-house-painting-geelong-guide/best-exterior-painters-geelong.html): Checklist for vetting and comparing exterior painting contractors.
+- [DIY vs Professional Exterior Painting: An Honest Comparison](https://www.paintersofgeelong.com.au/blogs/exterior-house-painting-geelong-guide/diy-vs-professional-exterior-painting.html): Cost and outcome comparison between DIY and professional exterior painting.
+- [Exterior House Painting Tips & Hacks](https://www.paintersofgeelong.com.au/blogs/exterior-house-painting-geelong-guide/exterior-house-painting-tips.html): Professional exterior painting tips, including weather-timing guidance.
+
+## Blog Index
+- [Blogs](https://www.paintersofgeelong.com.au/blogs.html): Index of all published painting guides and articles.
