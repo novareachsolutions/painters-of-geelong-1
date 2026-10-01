@@ -205,7 +205,7 @@
     .team-teaser-names li:last-child { border-bottom: none; }
     .team-teaser-initial { width: 38px; height: 38px; border-radius: 50%; background: #fef3eb; color: #e8762d; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .team-teaser-person { font-size: 13px; color: #777; line-height: 1.35; }
-    .team-teaser-person strong { display: block; font-size: 16px; font-weight: 700; color: #0f0f14; }
+    .team-teaser-person h3 { display: block; font-size: 16px; font-weight: 700; color: #0f0f14; line-height: inherit; margin: 0; }
 
     /* PORTFOLIO */
     .portfolio-section { padding: 80px 64px; background: #fff; }
