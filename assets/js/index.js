@@ -1,14 +1,16 @@
     gsap.registerPlugin(ScrollTrigger);
 
-    // Hero entrance animation
-    const heroElements = ['.hero-heading', '.hero-subtext', '.hero-buttons', '.hero-ratings'];
-    gsap.set(heroElements, { opacity: 0, y: 40, x: -20 });
-    gsap.set('.hero-right', { opacity: 0, x: 60 });
+    // Hero entrance animation (desktop only: on mobile the hero paints immediately)
+    if (window.matchMedia('(min-width: 769px)').matches) {
+      const heroElements = ['.hero-heading', '.hero-subtext', '.hero-buttons', '.hero-ratings'];
+      gsap.set(heroElements, { opacity: 0, y: 40, x: -20 });
+      gsap.set('.hero-right', { opacity: 0, x: 60 });
 
-    heroElements.forEach((el, i) => {
-      gsap.to(el, { opacity: 1, y: 0, x: 0, duration: 0.9, ease: 'power2.out', delay: 0.3 + i * 0.2 });
-    });
-    gsap.to('.hero-right', { opacity: 1, x: 0, duration: 1, ease: 'power2.out', delay: 0.5 });
+      heroElements.forEach((el, i) => {
+        gsap.to(el, { opacity: 1, y: 0, x: 0, duration: 0.9, ease: 'power2.out', delay: 0.3 + i * 0.2 });
+      });
+      gsap.to('.hero-right', { opacity: 1, x: 0, duration: 1, ease: 'power2.out', delay: 0.5 });
+    }
 
     // Hero satisfaction counter animation
     const statEl = document.querySelector('.stat-percent[data-target]');
