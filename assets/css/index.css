@@ -63,7 +63,7 @@
 
     /* MATERIAL USED */
     .hero-ratings { display: flex; align-items: center; gap: 14px; }
-    .material-label { font-size: 10.5px; font-weight: 700; color: #aaa; letter-spacing: 0.8px; text-transform: uppercase; }
+    .material-label { font-size: 10.5px; font-weight: 700; color: #6b6b73; letter-spacing: 0.8px; text-transform: uppercase; }
     .material-logo { height: 40px; width: auto; object-fit: contain; }
     .material-name { font-size: 14px; font-weight: 700; color: #1b3a5c; letter-spacing: 0.5px; }
 
@@ -319,7 +319,7 @@
     .text-accent { color: #e8762d; }
 
     /* FOOTER */
-    .footer { background: linear-gradient(rgba(27, 58, 92, 0.9), rgba(27, 58, 92, 0.9)), url('images/Professional-wall-painting-Dubai-services-for-homes-and-offices-with-expert-painters-and-premium-finishes-500x500.webp') center/cover no-repeat; color: #fff; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+    .footer { background: linear-gradient(rgba(27, 58, 92, 0.9), rgba(27, 58, 92, 0.9)), url('../../images/Professional-wall-painting-Dubai-services-for-homes-and-offices-with-expert-painters-and-premium-finishes-500x500.webp') center/cover no-repeat; color: #fff; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
     .footer-subscribe { padding: 80px 64px 60px; text-align: center; }
     .footer-subscribe-heading { font-size: 42px; font-weight: 700; line-height: 1.25; margin-bottom: 36px; }
     .subscribe-form { display: flex; align-items: center; justify-content: center; gap: 12px; max-width: 600px; margin: 0 auto; }

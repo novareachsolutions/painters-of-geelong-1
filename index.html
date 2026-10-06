@@ -8,18 +8,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="images/logo.png" />
   <link rel="apple-touch-icon" href="images/logo.png" />
-  <!-- Performance hints: preconnect to CDNs, preload LCP hero image -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <!-- Performance: fonts are served from this site (no third-party connections before first paint) -->
+  <link rel="preload" as="font" href="assets/fonts/plus-jakarta-sans-latin.woff2" type="font/woff2" crossorigin>
+  <style>
+    @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(assets/fonts/plus-jakarta-sans-latin.woff2) format('woff2'); }
+  </style>
   <link rel="preload" as="image" href="images/professional-painters-of-geelong.webp" imagesrcset="images/professional-painters-of-geelong-480.webp 480w, images/professional-painters-of-geelong-768.webp 768w, images/professional-painters-of-geelong.webp 1024w" imagesizes="(max-width: 768px) 100vw, 50vw" type="image/webp" fetchpriority="high">
   <title>House &amp; Commercial Painters Geelong | Painters of Geelong</title>
   <meta name="description" content="Local Geelong painters with 25+ years' experience in house and commercial painting. Dulux paints with a 10-year Dulux warranty on eligible systems, a 1-month workmanship warranty and free quotes." />
   <meta name="keywords" content="painters Geelong, house painters Geelong, interior painters Geelong, exterior painters Geelong, commercial painters Geelong, painting services Geelong, professional painters Geelong" />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
+  <link rel="preload" as="style" href="assets/css/fa-home.css" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="assets/css/fa-home.css" /></noscript>
   <link rel="stylesheet" href="assets/css/index.css" />
   <meta name="author" content="Painters of Geelong">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -130,7 +129,7 @@
         "name": "Are you licensed and insured?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Our painters are fully licensed and insured, giving you confidence that your property is protected throughout every residential and commercial painting project."
+          "text": "Yes, we're fully insured with public liability cover on every job. Painting doesn't require a trade licence in Victoria."
         }
       },
       {
@@ -153,7 +152,7 @@
       <img src="images/logo.webp" alt="Painters of Geelong" class="logo-img" width="320" height="320" />
     </a>
 
-    <button class="menu-toggle" onclick="document.querySelector('.mobile-menu-overlay').classList.add('open')">
+    <button class="menu-toggle" aria-label="Open menu" onclick="document.querySelector('.mobile-menu-overlay').classList.add('open')">
       <i class="fa-solid fa-bars"></i>
     </button>
 
@@ -333,7 +332,7 @@
           </a>
         </div>
       </div>
-      <p style="font-size:11.5px;line-height:1.5;color:#888;margin-top:12px;max-width:560px;">*Dulux warranty applies to eligible products and systems applied to Dulux specifications. Terms and conditions apply. Your rights under the Australian Consumer Law continue to apply.</p>
+      <p style="font-size:11.5px;line-height:1.5;color:#5f5f66;margin-top:12px;max-width:560px;">*Dulux warranty applies to eligible products and systems applied to Dulux specifications. Terms and conditions apply. Your rights under the Australian Consumer Law continue to apply.</p>
     </div>
 
     <div class="hero-right">
@@ -361,20 +360,8 @@
 
       <div class="stat-cards">
         <div class="stat-card">
-          <div class="avatars-row">
-            <div class="avatars-row-inner">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" class="avatar-img" alt="customer" width="36" height="36" loading="lazy" decoding="async" />
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" class="avatar-img" alt="customer" width="36" height="36" loading="lazy" decoding="async" />
-              <img src="https://randomuser.me/api/portraits/women/68.jpg" class="avatar-img" alt="customer" width="36" height="36" loading="lazy" decoding="async" />
-              <img src="https://randomuser.me/api/portraits/men/75.jpg" class="avatar-img" alt="customer" width="36" height="36" loading="lazy" decoding="async" />
-              <img src="https://randomuser.me/api/portraits/women/12.jpg" class="avatar-img" alt="customer" width="36" height="36" loading="lazy" decoding="async" />
-              <img src="https://randomuser.me/api/portraits/men/22.jpg" class="avatar-img" alt="customer" width="36" height="36" loading="lazy" decoding="async" />
-              <img src="https://randomuser.me/api/portraits/women/55.jpg" class="avatar-img" alt="customer" width="36" height="36" loading="lazy" decoding="async" />
-              <img src="https://randomuser.me/api/portraits/men/45.jpg" class="avatar-img" alt="customer" width="36" height="36" loading="lazy" decoding="async" />
-              <img src="https://randomuser.me/api/portraits/women/90.jpg" class="avatar-img" alt="customer" width="36" height="36" loading="lazy" decoding="async" />
-            </div>
-          </div>
-          <p class="customers-text"><strong>300+</strong> Satisfied Customers<br>across the Geelong region</p>
+          <div class="stat-percent">300+</div>
+          <p class="stat-desc">Satisfied customers<br>across the Geelong region</p>
         </div>
 
         <div class="stat-card">
@@ -448,27 +435,27 @@
 
     <div class="work-carousel-wrap">
       <div class="work-carousel" id="workCarousel">
-        <div class="work-card"><img src="images/pog-work/white-weatherboard-exterior-repaint-geelong.webp" alt="White weatherboard home and picket fence after an exterior repaint" loading="lazy" /></div>
-        <div class="work-card"><img src="images/pog-work/charcoal-timber-deck-staining-geelong.webp" alt="Charcoal-stained timber deck beside a white weatherboard home" loading="lazy" /></div>
-        <div class="work-card"><img src="images/heritage-home-exterior-repaint-geelong.webp" alt="Two-storey brick home with a repainted dark garage door and trims" loading="lazy" /></div>
-        <div class="work-card"><img src="images/pog-work/timber-paling-fence-staining-geelong.webp" alt="Stained timber paling fence running along a driveway" loading="lazy" /></div>
-        <div class="work-card"><img src="images/weatherboard-exterior-repaint-torquay.webp" alt="Repainted white weatherboard home with a metal roof" loading="lazy" /></div>
-        <div class="work-card"><img src="images/pog-work/pergola-garage-door-painting-geelong.webp" alt="Pergola and Colorbond garage door being prepared for painting" loading="lazy" /></div>
-        <div class="work-card"><img src="images/pog-work/boat-hull-painting-geelong.webp" alt="Boat hull being repainted in dry dock" loading="lazy" /></div>
-        <div class="work-card"><img src="images/pog-work/white-render-exterior-repaint-geelong.webp" alt="White rendered home exterior with timber entry feature" loading="lazy" /></div>
-        <div class="work-card"><img src="images/pog-work/charcoal-render-modern-home-exterior-geelong.webp" alt="Charcoal-rendered modern home exterior with repainted window frames" loading="lazy" /></div>
-        <div class="work-card"><img src="images/pog-work/outdoor-entertaining-area-painting-geelong.webp" alt="Covered outdoor entertaining area and pool after repainting" loading="lazy" /></div>
-        <div class="work-card"><img src="images/pog-work/pool-area-rendered-home-repaint-geelong.webp" alt="Repainted rendered home and pergola beside a swimming pool" loading="lazy" /></div>
-        <div class="work-card"><img src="images/pog-work/charcoal-render-home-side-elevation-geelong.webp" alt="Side elevation of a charcoal-rendered home after an exterior repaint" loading="lazy" /></div>
-        <div class="work-card"><img src="images/pog-work/modern-home-poolside-exterior-painting-geelong.webp" alt="Modern home exterior and poolside path after painting" loading="lazy" /></div>
-        <div class="work-card"><img src="images/pog-work/commercial-building-spray-painting-geelong.webp" alt="Painter spray-painting the exterior of a large modern building" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/white-weatherboard-exterior-repaint-geelong.webp" srcset="images/pog-work/white-weatherboard-exterior-repaint-geelong-600.webp 600w, images/pog-work/white-weatherboard-exterior-repaint-geelong.webp 1000w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="White weatherboard home and picket fence after an exterior repaint" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/charcoal-timber-deck-staining-geelong.webp" srcset="images/pog-work/charcoal-timber-deck-staining-geelong-600.webp 600w, images/pog-work/charcoal-timber-deck-staining-geelong.webp 1000w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="Charcoal-stained timber deck beside a white weatherboard home" loading="lazy" /></div>
+        <div class="work-card"><img src="images/heritage-home-exterior-repaint-geelong.webp" srcset="images/heritage-home-exterior-repaint-geelong-600.webp 600w, images/heritage-home-exterior-repaint-geelong.webp 1000w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="Two-storey brick home with a repainted dark garage door and trims" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/timber-paling-fence-staining-geelong.webp" srcset="images/pog-work/timber-paling-fence-staining-geelong-600.webp 600w, images/pog-work/timber-paling-fence-staining-geelong.webp 1000w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="Stained timber paling fence running along a driveway" loading="lazy" /></div>
+        <div class="work-card"><img src="images/weatherboard-exterior-repaint-torquay.webp" srcset="images/weatherboard-exterior-repaint-torquay-600.webp 600w, images/weatherboard-exterior-repaint-torquay.webp 1000w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="Repainted white weatherboard home with a metal roof" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/pergola-garage-door-painting-geelong.webp" srcset="images/pog-work/pergola-garage-door-painting-geelong-600.webp 600w, images/pog-work/pergola-garage-door-painting-geelong.webp 1000w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="Pergola and Colorbond garage door being prepared for painting" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/boat-hull-painting-geelong.webp" srcset="images/pog-work/boat-hull-painting-geelong-600.webp 600w, images/pog-work/boat-hull-painting-geelong.webp 1000w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="Boat hull being repainted in dry dock" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/white-render-exterior-repaint-geelong.webp" srcset="images/pog-work/white-render-exterior-repaint-geelong-600.webp 600w, images/pog-work/white-render-exterior-repaint-geelong.webp 1000w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="White rendered home exterior with timber entry feature" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/charcoal-render-modern-home-exterior-geelong.webp" srcset="images/pog-work/charcoal-render-modern-home-exterior-geelong-600.webp 600w, images/pog-work/charcoal-render-modern-home-exterior-geelong.webp 1000w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="Charcoal-rendered modern home exterior with repainted window frames" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/outdoor-entertaining-area-painting-geelong.webp" srcset="images/pog-work/outdoor-entertaining-area-painting-geelong-600.webp 600w, images/pog-work/outdoor-entertaining-area-painting-geelong.webp 1000w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="Covered outdoor entertaining area and pool after repainting" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/pool-area-rendered-home-repaint-geelong.webp" srcset="images/pog-work/pool-area-rendered-home-repaint-geelong-600.webp 600w, images/pog-work/pool-area-rendered-home-repaint-geelong.webp 1000w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="Repainted rendered home and pergola beside a swimming pool" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/charcoal-render-home-side-elevation-geelong.webp" srcset="images/pog-work/charcoal-render-home-side-elevation-geelong-600.webp 600w, images/pog-work/charcoal-render-home-side-elevation-geelong.webp 1000w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="Side elevation of a charcoal-rendered home after an exterior repaint" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/modern-home-poolside-exterior-painting-geelong.webp" srcset="images/pog-work/modern-home-poolside-exterior-painting-geelong-600.webp 600w, images/pog-work/modern-home-poolside-exterior-painting-geelong.webp 746w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="Modern home exterior and poolside path after painting" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/commercial-building-spray-painting-geelong.webp" srcset="images/pog-work/commercial-building-spray-painting-geelong-600.webp 600w, images/pog-work/commercial-building-spray-painting-geelong.webp 1000w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="Painter spray-painting the exterior of a large modern building" loading="lazy" /></div>
         <div class="work-card"><img src="images/pog-work/pergola-repaint-timber-cladding-geelong.webp" alt="Repainted pergola with dark beams against timber cladding" loading="lazy" /></div>
         <div class="work-card"><img src="images/pog-work/timber-lined-hallway-interior-painting-geelong.webp" alt="Interior hallway with polished timber floor and timber-lined walls" loading="lazy" /></div>
         <div class="work-card"><img src="images/pog-work/painting-door-trims.webp" alt="Repainted front door and timber trims with original leadlight glass" loading="lazy" /></div>
         <div class="work-card"><img src="images/pog-work/colorbond-fence-painting-geelong.webp" alt="Grey Colorbond fence panel painted against a brick wall" loading="lazy" /></div>
-        <div class="work-card"><img src="images/pog-work/elevated-modern-home-exterior-painting-geelong.webp" alt="Cream-painted elevated modern home above a curved driveway" loading="lazy" /></div>
-        <div class="work-card"><img src="images/living-room-painting-newtown.webp" alt="Freshly painted living room interior with warm neutral walls" loading="lazy" /></div>
-        <div class="work-card"><img src="images/pog-work/white-cladding-verandah-painting-geelong.webp" alt="Freshly painted white cladding and ceiling under a covered verandah" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/elevated-modern-home-exterior-painting-geelong.webp" srcset="images/pog-work/elevated-modern-home-exterior-painting-geelong-600.webp 600w, images/pog-work/elevated-modern-home-exterior-painting-geelong.webp 746w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="Cream-painted elevated modern home above a curved driveway" loading="lazy" /></div>
+        <div class="work-card"><img src="images/living-room-painting-newtown.webp" srcset="images/living-room-painting-newtown-600.webp 600w, images/living-room-painting-newtown.webp 750w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="Freshly painted living room interior with warm neutral walls" loading="lazy" /></div>
+        <div class="work-card"><img src="images/pog-work/white-cladding-verandah-painting-geelong.webp" srcset="images/pog-work/white-cladding-verandah-painting-geelong-600.webp 600w, images/pog-work/white-cladding-verandah-painting-geelong.webp 746w" sizes="(max-width: 480px) 85vw, (max-width: 768px) 50vw, 33vw" alt="Freshly painted white cladding and ceiling under a covered verandah" loading="lazy" /></div>
         <div class="work-card"><img src="images/pog-work/charcoal-timber-fence-painting-geelong.webp" alt="Charcoal-painted timber fence alongside a vegetable garden" loading="lazy" /></div>
       </div>
     </div>
@@ -679,8 +666,8 @@
           <p class="testimonial-name">Ash P</p>
           <span class="testimonial-role">Homeowner — Highton, VIC</span>
           <div class="testimonial-arrows">
-            <button class="testimonial-arrow" onclick="changeTestimonial(-1)"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="testimonial-arrow" onclick="changeTestimonial(1)"><i class="fa-solid fa-arrow-right"></i></button>
+            <button class="testimonial-arrow" aria-label="Previous review" onclick="changeTestimonial(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="testimonial-arrow" aria-label="Next review" onclick="changeTestimonial(1)"><i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
       </div>
@@ -691,8 +678,8 @@
           <p class="testimonial-name">Simone H</p>
           <span class="testimonial-role">Homeowner — Armstrong Creek, VIC</span>
           <div class="testimonial-arrows">
-            <button class="testimonial-arrow" onclick="changeTestimonial(-1)"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="testimonial-arrow" onclick="changeTestimonial(1)"><i class="fa-solid fa-arrow-right"></i></button>
+            <button class="testimonial-arrow" aria-label="Previous review" onclick="changeTestimonial(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="testimonial-arrow" aria-label="Next review" onclick="changeTestimonial(1)"><i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
       </div>
@@ -703,8 +690,8 @@
           <p class="testimonial-name">Jo W</p>
           <span class="testimonial-role">Homeowner — Belmont, VIC</span>
           <div class="testimonial-arrows">
-            <button class="testimonial-arrow" onclick="changeTestimonial(-1)"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="testimonial-arrow" onclick="changeTestimonial(1)"><i class="fa-solid fa-arrow-right"></i></button>
+            <button class="testimonial-arrow" aria-label="Previous review" onclick="changeTestimonial(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="testimonial-arrow" aria-label="Next review" onclick="changeTestimonial(1)"><i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
       </div>
@@ -715,8 +702,8 @@
           <p class="testimonial-name">Nick</p>
           <span class="testimonial-role">Homeowner — Bells Beach, VIC</span>
           <div class="testimonial-arrows">
-            <button class="testimonial-arrow" onclick="changeTestimonial(-1)"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="testimonial-arrow" onclick="changeTestimonial(1)"><i class="fa-solid fa-arrow-right"></i></button>
+            <button class="testimonial-arrow" aria-label="Previous review" onclick="changeTestimonial(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="testimonial-arrow" aria-label="Next review" onclick="changeTestimonial(1)"><i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
       </div>
@@ -727,8 +714,8 @@
           <p class="testimonial-name">Melanie</p>
           <span class="testimonial-role">Homeowner — Geelong, VIC</span>
           <div class="testimonial-arrows">
-            <button class="testimonial-arrow" onclick="changeTestimonial(-1)"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="testimonial-arrow" onclick="changeTestimonial(1)"><i class="fa-solid fa-arrow-right"></i></button>
+            <button class="testimonial-arrow" aria-label="Previous review" onclick="changeTestimonial(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="testimonial-arrow" aria-label="Next review" onclick="changeTestimonial(1)"><i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
       </div>
@@ -769,6 +756,11 @@
         <span class="portfolio-tag">Exterior Painting</span>
         <h3 class="portfolio-title">Timber Fence Restoration — Highton</h3>
       </a>
+      <a href="projects/modern-architectural-home-painting-highton.html" class="portfolio-card" style="text-decoration:none;color:inherit;">
+        <div class="portfolio-img-wrap"><img src="images/modern-architectural-home-painting-highton.webp" alt="Curved contemporary architectural home in Highton with light rendered walls and a dark grey podium wall" class="portfolio-img" loading="lazy" decoding="async" /></div>
+        <span class="portfolio-tag">Exterior &amp; Interior Painting</span>
+        <h3 class="portfolio-title">Modern Architectural Home Exterior &amp; Interior — Highton</h3>
+      </a>
     </div>
   </section>
 
@@ -805,11 +797,11 @@
           </div>
           <div class="form-row">
             <div class="form-field">
-              <select name="service" class="form-select" required><option value="">Choose a Service *</option><option>Interior Painting</option><option>Exterior Painting</option><option>Commercial Painting</option><option>Deck & Timber Staining</option><option>Pressure Cleaning</option></select>
+              <select name="service" class="form-select" aria-label="Service" required><option value="">Choose a Service *</option><option>Interior Painting</option><option>Exterior Painting</option><option>Commercial Painting</option><option>Deck & Timber Staining</option><option>Pressure Cleaning</option></select>
               <span class="form-error" data-error-for="service"></span>
             </div>
             <div class="form-field">
-              <select name="preferred_date" class="form-select" required><option value="">Preferred Date *</option><option>This Week</option><option>Next Week</option><option>This Month</option></select>
+              <select name="preferred_date" class="form-select" aria-label="Preferred date" required><option value="">Preferred Date *</option><option>This Week</option><option>Next Week</option><option>This Month</option></select>
               <span class="form-error" data-error-for="preferred_date"></span>
             </div>
           </div>
@@ -933,7 +925,7 @@
           <i class="fa-solid fa-plus"></i>
         </h3>
         <div class="faq-answer">
-          <p>Yes. Our painters are fully licensed and insured, giving you confidence that your property is protected throughout every residential and commercial painting project.</p>
+          <p>Yes, we're fully insured with public liability cover on every job. Painting doesn't require a trade licence in Victoria.</p>
         </div>
       </div>
       <div class="faq-item">
@@ -1014,17 +1006,33 @@
     </div>
   </footer>
 
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script defer src="assets/js/index.js"></script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-988ZG4DRG6"></script>
+  <!-- Google tag (gtag.js): queued now, library loaded after the page has rendered -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-988ZG4DRG6');
+  </script>
+  <!-- Animation and page scripts load after the page has rendered, so they don't hold up first paint -->
+  <script>
+    (function () {
+      function load(src, done) {
+        var s = document.createElement('script');
+        s.src = src;
+        if (done) s.onload = done;
+        document.body.appendChild(s);
+      }
+      function start() {
+        load('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', function () {
+          load('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js', function () {
+            load('assets/js/index.js');
+          });
+        });
+        setTimeout(function () { load('https://www.googletagmanager.com/gtag/js?id=G-988ZG4DRG6'); }, 1500);
+      }
+      if (document.readyState === 'complete') start();
+      else window.addEventListener('load', start);
+    })();
   </script>
 </body>
 </html>
