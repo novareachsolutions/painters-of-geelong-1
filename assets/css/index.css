@@ -230,6 +230,15 @@
     .appointment-badge i { color: #e8762d; font-size: 16px; }
     .appointment-badge span { font-size: 13px; font-weight: 700; color: #e8762d; letter-spacing: 1.5px; text-transform: uppercase; }
     .appointment-heading { font-size: 32px; font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 20px; }
+
+    /* checklist banner */
+    .checklist-banner { padding: 20px 20px; background: #fff; }
+    .checklist-banner-inner { background: #1b3a5c; border-radius: 16px; padding: 48px 56px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+    .checklist-banner-text { max-width: 720px; }
+    .checklist-banner .section-badge { justify-content: flex-start; margin-bottom: 10px; }
+    .checklist-banner-heading { font-size: 32px; font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 12px; }
+    .checklist-banner-desc { font-size: 15.5px; color: rgba(255,255,255,0.8); line-height: 1.7; }
+    .checklist-banner .btn-primary { flex: none; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
     .form-row.full { grid-template-columns: 1fr; }
     .form-input, .form-select, .form-textarea {
@@ -476,6 +485,8 @@
       .appointment-img { height: 360px; }
       .appointment-form-wrap { padding: 32px 24px; }
       .appointment-heading { font-size: 28px; }
+      .checklist-banner-inner { flex-direction: column; align-items: flex-start; padding: 32px 24px; gap: 22px; }
+      .checklist-banner-heading { font-size: 26px; }
       .testimonials-section { padding: 48px 20px; }
       .testimonials-top { flex-direction: column; align-items: flex-start; gap: 24px; }
       .testimonial-content, .testimonial-slide { flex-direction: column; gap: 32px; }
@@ -560,6 +571,9 @@
       .appointment-section { padding: 10px; }
       .appointment-form-wrap { padding: 28px 20px; }
       .appointment-heading { font-size: 24px; }
+      .checklist-banner { padding: 10px; }
+      .checklist-banner-inner { padding: 28px 20px; }
+      .checklist-banner-heading { font-size: 22px; }
       .form-row { grid-template-columns: 1fr; }
       .testimonials-section { padding: 40px 16px; }
       .testimonials-stat-number { font-size: 36px; }
