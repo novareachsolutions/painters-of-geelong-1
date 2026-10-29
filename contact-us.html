@@ -40,6 +40,13 @@
     }
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.paintersofgeelong.com.au/"},{"@type":"ListItem","position":2,"name":"Contact Us","item":"https://www.paintersofgeelong.com.au/contact-us.html"}]}</script>
+  <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "z56nrc1xyy");
+  </script>
 </head>
 <body>
 
@@ -236,75 +243,97 @@
       <!-- RIGHT: FORM -->
       <div class="form-card">
         <div class="form-inner">
+          <h2 class="form-heading">Request a Painting Quote</h2>
+          <p class="form-sub">Tell us about your painting project, and our team will get in touch.</p>
           <div class="form-success" id="formSuccess">
             <i class="fa-solid fa-circle-check"></i>&nbsp; Thanks &mdash; your message has been received. We'll get back to you within 1&ndash;2 business days.
           </div>
           <div class="form-failure" id="formError"></div>
-          <form id="quoteForm" action="/api/send-email" method="POST" novalidate>
+          <form id="quoteForm" action="/api/send-email" method="POST" novalidate data-quote-form data-source="contact" data-success="formSuccess" data-error="formError">
             <!-- Honeypot: hidden from people, often filled by bots -->
             <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true" />
 
             <div class="form-row">
               <div class="form-field">
                 <label class="form-label" for="name">Your Name <span class="req">*</span></label>
-                <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required />
+                <input type="text" id="name" name="name" class="form-input" placeholder="Full Name" autocomplete="name" maxlength="60" required />
                 <span class="form-error" data-error-for="name"></span>
               </div>
               <div class="form-field">
                 <label class="form-label" for="phone">Phone Number <span class="req">*</span></label>
-                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Phone Number" required />
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Phone Number" autocomplete="tel" inputmode="tel" required />
                 <span class="form-error" data-error-for="phone"></span>
               </div>
             </div>
 
             <div class="form-row">
-              <div class="form-field full">
+              <div class="form-field">
                 <label class="form-label" for="email">Email Address <span class="opt">(optional)</span></label>
-                <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" />
+                <input type="email" id="email" name="email" class="form-input" placeholder="Email Address" autocomplete="email" maxlength="254" />
                 <span class="form-error" data-error-for="email"></span>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="suburb">Suburb / Postcode <span class="req">*</span></label>
+                <input type="text" id="suburb" name="suburb" class="form-input" placeholder="e.g. Belmont 3216" autocomplete="address-level2" maxlength="60" required />
+                <span class="form-error" data-error-for="suburb"></span>
               </div>
             </div>
 
             <div class="form-row">
-              <div class="form-field">
+              <div class="form-field full">
                 <label class="form-label" for="service">Choose a Service <span class="req">*</span></label>
                 <select id="service" name="service" class="form-select" required>
-                  <option value="">Choose a Service</option>
+                  <option value="">Select Service</option>
                   <option>Interior Painting</option>
                   <option>Exterior Painting</option>
                   <option>Commercial Painting</option>
                   <option>Deck &amp; Timber Staining</option>
                   <option>Pressure Cleaning</option>
+                  <option>Multiple Services</option>
+                  <option>Other</option>
                 </select>
                 <span class="form-error" data-error-for="service"></span>
               </div>
-              <div class="form-field">
-                <label class="form-label" for="preferred_date">Preferred Date <span class="req">*</span></label>
-                <select id="preferred_date" name="preferred_date" class="form-select" required>
-                  <option value="">Preferred Date</option>
-                  <option>This Week</option>
-                  <option>Next Week</option>
-                  <option>This Month</option>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field full">
+                <label class="form-label" for="timeframe">Preferred Timeframe <span class="opt">(optional)</span></label>
+                <select id="timeframe" name="timeframe" class="form-select">
+                  <option value="">Select Timeframe</option>
+                  <option>ASAP</option>
+                  <option>Within 2 Weeks</option>
+                  <option>Within a Month</option>
+                  <option>Flexible</option>
+                  <option>Exploring Options</option>
                 </select>
-                <span class="form-error" data-error-for="preferred_date"></span>
+                <span class="form-error" data-error-for="timeframe"></span>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-field full">
-                <label class="form-label" for="property_size">Property Size (approx sqm) <span class="opt">(optional)</span></label>
-                <input type="text" id="property_size" name="property_size" class="form-input" placeholder="Property Size (approx sqm)" />
+                <label class="form-label" for="message">Project Details <span class="opt">(optional)</span></label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Briefly describe what needs painting..." maxlength="1000"></textarea>
+                <span class="form-error" data-error-for="message"></span>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-field full">
-                <label class="form-label" for="message">Message <span class="opt">(optional)</span></label>
-                <textarea id="message" name="message" class="form-textarea" placeholder="Write Your Message Here..."></textarea>
+                <label class="form-label" for="photos">Upload Photos <span class="opt">(optional)</span></label>
+                <div class="photo-drop">
+                  <input type="file" id="photos" name="photos" class="photo-input" accept="image/jpeg,image/png,image/webp" multiple aria-describedby="photosHint" />
+                  <svg class="photo-drop-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><line x1="16" y1="5" x2="22" y2="5"/><line x1="19" y1="2" x2="19" y2="8"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                  <span class="photo-drop-title">Add Project Photos</span>
+                  <span class="photo-drop-hint" id="photosHint">JPG, PNG or WebP &middot; Up to 5 photos &middot; Max 5 MB each</span>
+                </div>
+                <ul class="photo-list"></ul>
+                <span class="form-error" data-error-for="photos"></span>
               </div>
             </div>
 
-            <button type="submit" class="btn-submit">Contact Now <i class="fa-solid fa-arrow-up-right"></i></button>
+            <button type="submit" class="btn-submit">Request a Free Quote</button>
           </form>
         </div>
       </div>
@@ -344,7 +373,7 @@
           <li><a href="areas-of-service.html">Areas of Service</a></li>
           <li><a href="blogs.html">Blogs</a></li>
           <li><a href="contact-us.html">Contact Us</a></li>
-          <li><a href="assets/downloads/painters-of-geelong-home-painting-checklist.pdf" target="_blank" rel="noopener">Painting Checklist</a></li>
+          <li><a href="assets/downloads/painters-of-geelong-home-painting-checklist.pdf" class="footer-download-link" target="_blank" rel="noopener">Painting Checklist <span>(PDF)</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></a></li>
         </ul>
       </div>
       <div>
@@ -381,6 +410,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/quote-form.js"></script>
   <script src="assets/js/contact-us.js"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-988ZG4DRG6"></script>

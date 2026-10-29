@@ -268,6 +268,23 @@
     .form-error { display: none; color: #ffc9c0; font-size: 12.5px; margin-top: 5px; padding-left: 4px; }
     .form-field.invalid .form-error { display: block; }
     .form-field.invalid .form-input, .form-field.invalid .form-select, .form-field.invalid .form-textarea { border-color: #ff8a80; }
+    .photo-drop { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 18px 16px; border: 1.5px dashed rgba(255,255,255,0.25); border-radius: 20px; text-align: center; transition: border-color 0.2s, background 0.2s; }
+    .photo-drop:hover, .photo-drop.is-dragging, .photo-drop:focus-within { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.04); }
+    .photo-input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+    .photo-drop-icon { color: #e8762d; }
+    .photo-drop-title { font-size: 14.5px; font-weight: 600; color: #fff; }
+    .photo-drop-opt { font-weight: 400; color: rgba(255,255,255,0.55); font-size: 13px; }
+    .photo-drop-hint { font-size: 12.5px; color: rgba(255,255,255,0.6); }
+    .photo-list { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 8px; }
+    .photo-list:empty { display: none; }
+    .photo-item { display: flex; align-items: center; gap: 12px; border: 1.5px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 6px 8px; }
+    .photo-item img { width: 40px; height: 40px; object-fit: cover; border-radius: 8px; flex: none; }
+    .photo-name { flex: 1; min-width: 0; font-size: 13.5px; color: #fff; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .photo-size { flex: none; font-size: 12.5px; color: rgba(255,255,255,0.6); }
+    .photo-remove { flex: none; width: 30px; height: 30px; border: none; border-radius: 50%; background: rgba(255,255,255,0.1); color: #fff; font-size: 18px; line-height: 1; cursor: pointer; font-family: inherit; }
+    .photo-remove:hover, .photo-remove:focus-visible { background: rgba(255,138,128,0.3); }
+    .form-field.invalid .photo-drop { border-color: #ff8a80; }
+    .btn-contact:disabled { opacity: 0.7; cursor: default; }
 
     /* TESTIMONIALS */
     .testimonials-section { padding: 80px 64px; background: #fff; }
@@ -345,6 +362,10 @@
     .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .footer-links a { text-decoration: none; color: rgba(255,255,255,0.55); font-size: 15px; transition: color 0.2s; }
     .footer-links a:hover { color: #fff; }
+    .footer-links a.footer-download-link { color: #e8762d; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+    .footer-links a.footer-download-link:hover { color: #f4a56b; }
+    .footer-download-link span { color: rgba(255,255,255,0.65); font-weight: 500; }
+    .footer-download-link svg { display: inline-block; margin-left: 0.35rem; vertical-align: -0.2em; }
     .footer-contact { display: flex; flex-direction: column; gap: 12px; }
     .footer-contact-item { font-size: 15px; color: rgba(255,255,255,0.55); text-decoration: none; display: block; }
     .footer-contact-item:hover { color: #fff; }

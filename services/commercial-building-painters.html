@@ -132,6 +132,7 @@
     .cta-sparkle:nth-child(2) { bottom: 22px; right: 72px; font-size: 40px; }
     .cta-sparkle:nth-child(3) { bottom: 18px; right: 32px; font-size: 24px; }
     .cta-primary h2 { font-size: 36px; font-weight: 700; color: #fff; line-height: 1.3; max-width: 400px; }
+    .cta-primary .cta-note { margin-top: 12px; font-size: 16px; color: rgba(255,255,255,0.92); line-height: 1.5; max-width: 420px; }
     .cta-primary .btn-cta { background: #fff; color: #0f0f14; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-size: 15px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.3s, box-shadow 0.3s; }
     .cta-primary .btn-cta:hover { transform: scale(1.05); box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
     .cta-secondary { background: #1b3a5c; border-radius: 20px; padding: 48px 36px; display: flex; flex-direction: column; justify-content: center; }
@@ -170,6 +171,10 @@
     .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14.5px; transition: color 0.2s; }
     .footer-links a:hover { color: #e8762d; }
+    .footer-links a.footer-download-link { color: #e8762d; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+    .footer-links a.footer-download-link:hover { color: #f4a56b; }
+    .footer-download-link span { color: rgba(255,255,255,0.65); font-weight: 500; }
+    .footer-download-link svg { display: inline-block; margin-left: 0.35rem; vertical-align: -0.2em; }
     .footer-contact { display: flex; flex-direction: column; gap: 14px; }
     .footer-contact-item { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14.5px; transition: color 0.2s; }
     .footer-contact-item:hover { color: #e8762d; }
@@ -311,6 +316,13 @@
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.paintersofgeelong.com.au/"},{"@type":"ListItem","position":2,"name":"Commercial Painting","item":"https://www.paintersofgeelong.com.au/services/commercial-building-painters.html"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can you paint outside of business hours?","acceptedAnswer":{"@type":"Answer","text":"Yes, we work evenings, weekends, and overnight to reduce disruption to your business."}},{"@type":"Question","name":"Do you handle large commercial projects?","acceptedAnswer":{"@type":"Answer","text":"Yes, we handle projects of all sizes from small offices to large warehouses and multi-storey buildings."}},{"@type":"Question","name":"What types of paint do you use for commercial spaces?","acceptedAnswer":{"@type":"Answer","text":"We use commercial-grade, low-VOC paints that are durable, safe, and easy to maintain."}},{"@type":"Question","name":"Do you provide colour consultation for businesses?","acceptedAnswer":{"@type":"Answer","text":"Yes, we offer colour consultation based on branding, environment, and compliance needs."}},{"@type":"Question","name":"How do I get a quote for commercial painting in Geelong?","acceptedAnswer":{"@type":"Answer","text":"Contact us to arrange a free site inspection and receive a detailed written quote."}}]}</script>
+  <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "z56nrc1xyy");
+  </script>
 </head>
 <body>
 
@@ -565,7 +577,10 @@
         <span class="cta-sparkle">✦</span>
         <span class="cta-sparkle">✦</span>
         <span class="cta-sparkle">✦</span>
-        <h2>Time to Refresh Your Business Space?</h2>
+        <div>
+          <h2>Time to Refresh Your Business Space?</h2>
+          <p class="cta-note">Free, no-obligation commercial painting quotes &mdash; most returned within 1&ndash;2 business days.</p>
+        </div>
         <a href="../contact-us.html" class="btn-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
       </div>
       <div class="cta-secondary">
@@ -672,7 +687,7 @@
           <li><a href="../areas-of-service.html">Areas of Service</a></li>
           <li><a href="../blogs.html">Blogs</a></li>
           <li><a href="../contact-us.html">Contact Us</a></li>
-          <li><a href="../assets/downloads/painters-of-geelong-home-painting-checklist.pdf" target="_blank" rel="noopener">Painting Checklist</a></li>
+          <li><a href="../assets/downloads/painters-of-geelong-home-painting-checklist.pdf" class="footer-download-link" target="_blank" rel="noopener">Painting Checklist <span>(PDF)</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></a></li>
         </ul>
       </div>
       <div>

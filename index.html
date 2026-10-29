@@ -151,6 +151,13 @@
     ]
   }
   </script>
+  <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "z56nrc1xyy");
+  </script>
 </head>
 <body>
 
@@ -215,7 +222,7 @@
       <li><a href="projects.html">Projects</a></li>
       <li><a href="areas-of-service.html">Areas of Service</a></li>
       <li><a href="blogs.html">Blogs</a></li>
-      <li class="mobile-appointment"><a href="contact-us.html" class="btn-appointment-mobile">Book an Appointment <i class="fa-solid fa-arrow-up-right"></i></a></li>
+      <li class="mobile-appointment"><a href="contact-us.html" class="btn-appointment-mobile">Submit an Enquiry <i class="fa-solid fa-arrow-up-right"></i></a></li>
     </ul>
 
     <div class="nav-right">
@@ -224,7 +231,7 @@
         0431 261 281
       </a>
       <div class="nav-divider"></div>
-      <a href="contact-us.html" class="btn-appointment">Book an Appointment <i class="fa-solid fa-arrow-up-right"></i></a>
+      <a href="contact-us.html" class="btn-appointment">Submit an Enquiry <i class="fa-solid fa-arrow-up-right"></i></a>
     </div>
   </nav>
 
@@ -243,7 +250,7 @@
       <li><a href="projects.html">Projects</a></li>
       <li><a href="areas-of-service.html">Areas of Service</a></li>
       <li><a href="blogs.html">Blogs</a></li>
-      <li><a href="contact-us.html" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open');" style="color:#e8762d; font-weight:600;">Book an Appointment</a></li>
+      <li><a href="contact-us.html" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open');" style="color:#e8762d; font-weight:600;">Submit an Enquiry</a></li>
     </ul>
   </div>
 
@@ -418,7 +425,7 @@
         <i class="fa-solid fa-sparkles step-cta-icon"></i>
         <div>
           <h3 class="step-cta-heading">Get a Free Painting Quote Today — Transform Your Space!</h3>
-          <a href="contact-us.html" class="btn-book">Book Now <i class="fa-solid fa-arrow-up-right"></i></a>
+          <a href="contact-us.html" class="btn-book">Enquire Now <i class="fa-solid fa-arrow-up-right"></i></a>
         </div>
       </div>
     </div>
@@ -782,48 +789,60 @@
           <span>Get a Free Quote</span>
         </div>
         <h2 class="appointment-heading">Get a Free Painting<br>Quote Today</h2>
-        <form id="homeQuoteForm" action="/api/send-email" method="POST" novalidate>
+        <form id="homeQuoteForm" action="/api/send-email" method="POST" novalidate data-quote-form data-source="home" data-success="homeFormSuccess" data-error="homeFormError">
           <!-- Honeypot: hidden from people, often filled by bots -->
           <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true" />
           <div class="form-success" id="homeFormSuccess"><i class="fa-solid fa-circle-check"></i>&nbsp; Thanks &mdash; your request has been received. We'll get back to you within 1&ndash;2 business days.</div>
           <div class="form-failure" id="homeFormError"></div>
           <div class="form-row">
             <div class="form-field">
-              <input type="text" name="name" class="form-input" placeholder="Your Name *" required />
+              <input type="text" name="name" class="form-input" placeholder="Your Name *" aria-label="Your name" autocomplete="name" maxlength="60" required />
               <span class="form-error" data-error-for="name"></span>
             </div>
             <div class="form-field">
-              <input type="tel" name="phone" class="form-input" placeholder="Phone Number *" required />
+              <input type="tel" name="phone" class="form-input" placeholder="Phone Number *" aria-label="Phone number" autocomplete="tel" inputmode="tel" required />
               <span class="form-error" data-error-for="phone"></span>
-            </div>
-          </div>
-          <div class="form-row full">
-            <div class="form-field">
-              <input type="email" name="email" class="form-input" placeholder="Email Address (optional)" />
-              <span class="form-error" data-error-for="email"></span>
             </div>
           </div>
           <div class="form-row">
             <div class="form-field">
-              <select name="service" class="form-select" aria-label="Service" required><option value="">Choose a Service *</option><option>Interior Painting</option><option>Exterior Painting</option><option>Commercial Painting</option><option>Deck & Timber Staining</option><option>Pressure Cleaning</option></select>
+              <input type="email" name="email" class="form-input" placeholder="Email Address (optional)" aria-label="Email address (optional)" autocomplete="email" maxlength="254" />
+              <span class="form-error" data-error-for="email"></span>
+            </div>
+            <div class="form-field">
+              <input type="text" name="suburb" class="form-input" placeholder="Suburb / Postcode * e.g. Belmont 3216" aria-label="Suburb or postcode" autocomplete="address-level2" maxlength="60" required />
+              <span class="form-error" data-error-for="suburb"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <select name="service" class="form-select" aria-label="Service" required><option value="">Choose a Service *</option><option>Interior Painting</option><option>Exterior Painting</option><option>Commercial Painting</option><option>Deck &amp; Timber Staining</option><option>Pressure Cleaning</option><option>Multiple Services</option><option>Other</option></select>
               <span class="form-error" data-error-for="service"></span>
             </div>
             <div class="form-field">
-              <select name="preferred_date" class="form-select" aria-label="Preferred date" required><option value="">Preferred Date *</option><option>This Week</option><option>Next Week</option><option>This Month</option></select>
-              <span class="form-error" data-error-for="preferred_date"></span>
+              <select name="timeframe" class="form-select" aria-label="Preferred timeframe (optional)"><option value="">Preferred Timeframe (optional)</option><option>ASAP</option><option>Within 2 Weeks</option><option>Within a Month</option><option>Flexible</option><option>Exploring Options</option></select>
+              <span class="form-error" data-error-for="timeframe"></span>
             </div>
           </div>
           <div class="form-row full">
             <div class="form-field">
-              <input type="text" name="property_size" class="form-input" placeholder="Property Size (approx sqm) (optional)" />
+              <textarea name="message" class="form-textarea" placeholder="Project Details (optional): briefly describe what needs painting..." aria-label="Project details (optional)" maxlength="1000"></textarea>
+              <span class="form-error" data-error-for="message"></span>
             </div>
           </div>
           <div class="form-row full">
             <div class="form-field">
-              <textarea name="message" class="form-textarea" placeholder="Write Your Message Here... (optional)"></textarea>
+              <div class="photo-drop">
+                <input type="file" name="photos" class="photo-input" accept="image/jpeg,image/png,image/webp" multiple aria-label="Upload photos (optional)" aria-describedby="homePhotosHint" />
+                <svg class="photo-drop-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><line x1="16" y1="5" x2="22" y2="5"/><line x1="19" y1="2" x2="19" y2="8"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                <span class="photo-drop-title">Add Project Photos <span class="photo-drop-opt">(optional)</span></span>
+                <span class="photo-drop-hint" id="homePhotosHint">JPG, PNG or WebP &middot; Up to 5 photos &middot; Max 5 MB each</span>
+              </div>
+              <ul class="photo-list"></ul>
+              <span class="form-error" data-error-for="photos"></span>
             </div>
           </div>
-          <button type="submit" class="btn-contact">Contact Now</button>
+          <button type="submit" class="btn-contact">Request a Free Quote</button>
         </form>
       </div>
     </div>
@@ -939,7 +958,7 @@
           <i class="fa-solid fa-plus"></i>
         </h3>
         <div class="faq-answer">
-          <p>Get at least three written painting quotes based on the same scope of work. Compare surface preparation, repairs, paint products, number of coats, exclusions, timelines, insurance and warranty terms alongside the total price. The cheapest quote may not provide the best value if important work is excluded. For more detailed guidance, read our <a href="blogs/interior-house-painting-geelong-guide/best-interior-house-painters-geelong.html">interior painter quote comparison checklist</a> or <a href="blogs/exterior-house-painting-geelong-guide/best-exterior-painters-geelong.html">guide to choosing exterior painters in Geelong</a>.</p>
+          <p>Get at least three written painting quotes based on the same scope of work. Compare surface preparation, repairs, paint products, number of coats, exclusions, timelines, insurance and warranty terms alongside the total price. The cheapest quote may not provide the best value if important work is excluded. For more detailed guidance, read our <a href="blogs/interior-house-painting-geelong-guide/best-interior-house-painters-geelong.html#compare-painting-quotes">interior painter quote comparison checklist</a> or <a href="blogs/exterior-house-painting-geelong-guide/best-exterior-painters-geelong.html">guide to choosing exterior painters in Geelong</a>.</p>
         </div>
       </div>
       <div class="faq-item">
@@ -1004,7 +1023,7 @@
           <li><a href="areas-of-service.html">Areas of Service</a></li>
           <li><a href="blogs.html">Blogs</a></li>
           <li><a href="contact-us.html">Contact Us</a></li>
-          <li><a href="assets/downloads/painters-of-geelong-home-painting-checklist.pdf" target="_blank" rel="noopener">Painting Checklist</a></li>
+          <li><a href="assets/downloads/painters-of-geelong-home-painting-checklist.pdf" class="footer-download-link" target="_blank" rel="noopener">Painting Checklist <span>(PDF)</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></a></li>
         </ul>
       </div>
       <div>
@@ -1056,6 +1075,7 @@
         document.body.appendChild(s);
       }
       function start() {
+        load('assets/js/quote-form.js');
         load('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', function () {
           load('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js', function () {
             load('assets/js/index.js');

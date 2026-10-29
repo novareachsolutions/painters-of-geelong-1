@@ -105,6 +105,27 @@
     .form-error { display: none; color: #c0392b; font-size: 13px; margin-top: 2px; }
     .form-field.invalid .form-error { display: block; }
     .form-field.invalid .form-input, .form-field.invalid .form-select, .form-field.invalid .form-textarea { border-color: #c0392b; box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1); }
+    .form-heading { font-size: 24px; font-weight: 700; color: #1b2030; line-height: 1.25; margin-bottom: 6px; }
+    .form-sub { font-size: 14.5px; color: #5a6070; line-height: 1.5; margin-bottom: 26px; }
+
+    /* photo upload */
+    .photo-drop { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 22px 16px; background: #fff; border: 1.5px dashed #cfd3de; border-radius: 10px; text-align: center; transition: border-color 0.2s, background 0.2s, box-shadow 0.2s; }
+    .photo-drop:hover, .photo-drop.is-dragging { border-color: #e8762d; background: #fff8f2; }
+    .photo-drop:focus-within { border-color: #e8762d; box-shadow: 0 0 0 3px rgba(232, 118, 45, 0.12); }
+    .photo-input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+    .photo-drop-icon { color: #e8762d; }
+    .photo-drop-title { font-size: 14.5px; font-weight: 600; color: #1b2030; }
+    .photo-drop-hint { font-size: 12.5px; color: #6b7180; }
+    .photo-list { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 8px; }
+    .photo-list:empty { display: none; }
+    .photo-item { display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid #e2e4ec; border-radius: 10px; padding: 8px 10px; }
+    .photo-item img { width: 44px; height: 44px; object-fit: cover; border-radius: 6px; flex: none; }
+    .photo-name { flex: 1; min-width: 0; font-size: 13.5px; color: #1b2030; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .photo-size { flex: none; font-size: 12.5px; color: #6b7180; }
+    .photo-remove { flex: none; width: 30px; height: 30px; border: none; border-radius: 50%; background: #f3f4f8; color: #5a6070; font-size: 18px; line-height: 1; cursor: pointer; font-family: inherit; }
+    .photo-remove:hover, .photo-remove:focus-visible { background: #fdecea; color: #b3261e; }
+    .form-field.invalid .photo-drop { border-color: #c0392b; }
+    .btn-submit:disabled { opacity: 0.7; cursor: default; transform: none; box-shadow: none; }
 
     /* FOOTER */
     .footer { background: linear-gradient(rgba(27, 58, 92, 0.9), rgba(27, 58, 92, 0.9)), url('images/Professional-wall-painting-Dubai-services-for-homes-and-offices-with-expert-painters-and-premium-finishes-500x500.webp') center/cover no-repeat; color: #fff; display: flex; flex-direction: column; justify-content: center; }
@@ -124,6 +145,10 @@
     .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14.5px; transition: color 0.2s; }
     .footer-links a:hover { color: #e8762d; }
+    .footer-links a.footer-download-link { color: #e8762d; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+    .footer-links a.footer-download-link:hover { color: #f4a56b; }
+    .footer-download-link span { color: rgba(255,255,255,0.65); font-weight: 500; }
+    .footer-download-link svg { display: inline-block; margin-left: 0.35rem; vertical-align: -0.2em; }
     .footer-contact { display: flex; flex-direction: column; gap: 14px; }
     .footer-contact-item { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14.5px; transition: color 0.2s; }
     .footer-contact-item:hover { color: #e8762d; }

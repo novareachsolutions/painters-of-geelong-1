@@ -19,8 +19,70 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const TO_EMAIL = 'Paintersofgeelong@outlook.com';
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
 
-const PHONE_RE = /^[0-9+()\s-]{6,}$/;
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// These rules mirror assets/js/quote-form.js.
+const NAME_RE = /^\p{L}+(?: \p{L}+)*$/u;
+const PHONE_RE = /^(?:0[2-478]\d{8}|\+61[2-478]\d{8})$/;
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/;
+const SUBURB_RE = /^[\p{L}0-9' -]+$/u;
+const MAX_DETAILS = 1000;
+
+const SERVICES = [
+  'Interior Painting',
+  'Exterior Painting',
+  'Commercial Painting',
+  'Deck & Timber Staining',
+  'Pressure Cleaning',
+  'Multiple Services',
+  'Other',
+];
+const TIMEFRAMES = ['ASAP', 'Within 2 Weeks', 'Within a Month', 'Flexible', 'Exploring Options'];
+
+// Photos arrive base64-encoded (already resized in the browser) and go out as
+// email attachments. Vercel caps the whole request at 4.5 MB.
+const MAX_PHOTOS = 5;
+const MAX_PHOTO_BYTES = 5 * 1024 * 1024;
+const PHOTO_EXT = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' };
+
+function validSuburb(v) {
+  if (v.length < 3 || v.length > 60 || !SUBURB_RE.test(v)) return false;
+  const digits = v.match(/\d+/g) || [];
+  if (digits.length > 1 || (digits.length === 1 && digits[0].length !== 4)) return false;
+  return /\p{L}{2,}/u.test(v) || digits.length === 1;
+}
+
+// Identify the image type from its first bytes rather than trusting the client.
+function sniffImage(buf) {
+  if (buf.length > 3 && buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff) return 'image/jpeg';
+  if (buf.length > 8 && buf.toString('hex', 0, 8) === '89504e470d0a1a0a') return 'image/png';
+  if (buf.length > 12 && buf.toString('ascii', 0, 4) === 'RIFF' && buf.toString('ascii', 8, 12) === 'WEBP') return 'image/webp';
+  return null;
+}
+
+function photoAttachments(list) {
+  if (list == null) return { attachments: [] };
+  if (!Array.isArray(list)) return { error: 'The photos could not be read. Please try again.' };
+  if (list.length > MAX_PHOTOS) return { error: 'You can upload up to 5 photos.' };
+  const attachments = [];
+  for (let i = 0; i < list.length; i++) {
+    const p = list[i] || {};
+    const data = typeof p.data === 'string' ? p.data : '';
+    if (!/^[A-Za-z0-9+/]+={0,2}$/.test(data)) {
+      return { error: 'One of the photos could not be read. Please remove it and try again.' };
+    }
+    const buf = Buffer.from(data, 'base64');
+    const type = sniffImage(buf);
+    if (!type || buf.length > MAX_PHOTO_BYTES) {
+      return { error: 'Photos must be JPG, PNG or WebP images of 5 MB or less.' };
+    }
+    const base = String(p.name || '')
+      .replace(/\.[^.]*$/, '')
+      .replace(/[^A-Za-z0-9_-]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+      .slice(0, 60) || 'photo';
+    attachments.push({ filename: `${i + 1}-${base}.${PHOTO_EXT[type]}`, content: buf });
+  }
+  return { attachments };
+}
 
 function esc(v) {
   return String(v == null ? '' : v)
@@ -52,42 +114,49 @@ export default async function handler(req, res) {
 
   const v = (s) => String(s || '').trim();
   const f = {
-    name: v(body.name),
-    phone: v(body.phone),
+    name: v(body.name).replace(/ {2,}/g, ' '),
+    phone: v(body.phone).replace(/[\s().-]/g, '').replace(/^\+610/, '+61'),
     email: v(body.email),
+    suburb: v(body.suburb).replace(/ {2,}/g, ' '),
     service: v(body.service),
-    preferred_date: v(body.preferred_date),
-    property_size: v(body.property_size),
+    timeframe: v(body.timeframe),
     message: v(body.message),
   };
   const source = v(body.source) || '—';
+  const fail = (error, field) => res.status(400).json({ ok: false, error, field });
 
   // Server-side validation (mirrors the client):
-  // required = name, phone, service, preferred_date; optional = email, property_size, message.
-  if (!f.name) {
-    return res.status(400).json({ ok: false, error: 'Please enter your name.', field: 'name' });
+  // required = name, phone, suburb, service; optional = email, timeframe, message, photos.
+  if (!f.name) return fail('Please enter your name.', 'name');
+  if (!NAME_RE.test(f.name) || f.name.length > 60) {
+    return fail('Your name can only contain letters and spaces.', 'name');
   }
-  if (!f.phone || !PHONE_RE.test(f.phone)) {
-    return res.status(400).json({ ok: false, error: 'Please enter a valid phone number.', field: 'phone' });
+  if (f.name.length < 2) return fail('Please enter your full name.', 'name');
+  if (!f.phone) return fail('Please enter your phone number.', 'phone');
+  if (!PHONE_RE.test(f.phone)) {
+    return fail('Please enter a valid Australian phone number, e.g. 0431261281 or +61431261281.', 'phone');
   }
-  if (!f.service) {
-    return res.status(400).json({ ok: false, error: 'Please choose a service.', field: 'service' });
+  if (f.email && (f.email.length > 254 || !EMAIL_RE.test(f.email))) {
+    return fail('Please enter a valid email address.', 'email');
   }
-  if (!f.preferred_date) {
-    return res.status(400).json({ ok: false, error: 'Please choose a preferred date.', field: 'preferred_date' });
-  }
-  if (f.email && !EMAIL_RE.test(f.email)) {
-    return res.status(400).json({ ok: false, error: 'Please enter a valid email address.', field: 'email' });
-  }
+  if (!f.suburb) return fail('Please enter your suburb or postcode.', 'suburb');
+  if (!validSuburb(f.suburb)) return fail('Please enter a suburb name and/or a 4-digit postcode.', 'suburb');
+  if (!SERVICES.includes(f.service)) return fail('Please choose a service.', 'service');
+  if (f.timeframe && !TIMEFRAMES.includes(f.timeframe)) return fail('Please choose a timeframe from the list.', 'timeframe');
+  if (f.message.length > MAX_DETAILS) return fail('Please keep project details under 1,000 characters.', 'message');
+
+  const photos = photoAttachments(body.photos);
+  if (photos.error) return fail(photos.error, 'photos');
 
   const rows = [
     ['Name', f.name],
     ['Phone', f.phone],
     ['Email', f.email || '—'],
+    ['Suburb / Postcode', f.suburb],
     ['Service', f.service],
-    ['Preferred Date', f.preferred_date],
-    ['Property Size', f.property_size || '—'],
-    ['Message', f.message || '—'],
+    ['Preferred Timeframe', f.timeframe || '—'],
+    ['Project Details', f.message || '—'],
+    ['Photos', photos.attachments.length ? `${photos.attachments.length} attached` : '—'],
     ['Source', source],
   ];
 
@@ -115,6 +184,7 @@ export default async function handler(req, res) {
     };
     // Let staff reply straight to the customer when they left an email.
     if (f.email) payload.replyTo = f.email;
+    if (photos.attachments.length) payload.attachments = photos.attachments;
 
     const { data, error } = await resend.emails.send(payload);
     if (error) {

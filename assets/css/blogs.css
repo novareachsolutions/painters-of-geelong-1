@@ -141,6 +141,10 @@
     .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .footer-links li a { text-decoration: none; font-size: 14px; color: rgba(255,255,255,0.65); transition: color 0.2s; }
     .footer-links li a:hover { color: #e8762d; }
+    .footer-links a.footer-download-link { color: #e8762d; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+    .footer-links a.footer-download-link:hover { color: #f4a56b; }
+    .footer-download-link span { color: rgba(255,255,255,0.65); font-weight: 500; }
+    .footer-download-link svg { display: inline-block; margin-left: 0.35rem; vertical-align: -0.2em; }
     .footer-contact { display: flex; flex-direction: column; gap: 14px; }
     .footer-contact-item { text-decoration: none; font-size: 14px; color: rgba(255,255,255,0.65); transition: color 0.2s; }
     .footer-contact-item:hover { color: #e8762d; }
