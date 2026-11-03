@@ -182,6 +182,16 @@
     .testimonial-attr { display: inline-flex; align-items: center; gap: 14px; font-size: 13px; letter-spacing: 1.6px; text-transform: uppercase; color: rgba(255,255,255,.7); }
     .testimonial-attr strong { color: #fff; font-weight: 700; }
     .testimonial-attr .sep { width: 28px; height: 1px; background: #e8762d; display: inline-block; }
+    .testimonial-heading { font-size: 34px; font-weight: 700; color: #fff; line-height: 1.25; margin-bottom: 14px; }
+    .testimonial-intro { font-size: 16px; color: rgba(255,255,255,.8); line-height: 1.65; max-width: 700px; margin: 0 auto 32px; }
+
+    /* LOCAL PROJECT */
+    .local-project-section { padding: 0 64px 70px; background: #fff; }
+    .local-project-card { max-width: 1040px; margin: 0 auto; display: grid; grid-template-columns: 2fr 3fr; align-items: center; background: #f3f4f8; border-radius: 20px; overflow: hidden; }
+    .local-project-card img { width: 100%; height: 100%; min-height: 360px; max-height: 520px; object-fit: cover; align-self: stretch; display: block; }
+    .local-project-body { padding: 40px 44px; }
+    .local-project-body h2 { font-size: 32px; font-weight: 700; color: #0f0f14; line-height: 1.2; margin-bottom: 16px; }
+    .local-project-body p { font-size: 16px; color: #555; line-height: 1.7; margin-bottom: 26px; }
 
     /* FAQ */
     .faq-section { padding: 80px 64px; background: #fff; }
@@ -265,6 +275,7 @@
       .service-banner { padding: 0 24px 40px; }
       .trust-strip { padding: 22px 24px; }
       .intro-section { padding: 50px 24px; }
+      .local-project-section { padding: 0 24px 50px; }
       .services-deep-section { padding: 50px 24px; }
       .service-category { padding: 32px 28px; }
       .context-section { padding: 50px 24px; }
@@ -296,6 +307,11 @@
       .sub-services-grid { grid-template-columns: 1fr; }
       .context-head h2 { font-size: 30px; }
       .context-grid { grid-template-columns: 1fr; }
+      .local-project-card { grid-template-columns: 1fr; }
+      .local-project-card img { min-height: 0; max-height: 380px; }
+      .local-project-body { padding: 28px 22px 32px; }
+      .local-project-body h2 { font-size: 26px; }
+      .testimonial-heading { font-size: 26px; }
       .projects-head h2 { font-size: 30px; }
       .projects-grid { grid-template-columns: 1fr; }
       .testimonial-text { font-size: 20px; }
@@ -353,8 +369,11 @@
   {"@type":"Question","name":"Do you paint brick-veneer family homes in Grovedale?","acceptedAnswer":{"@type":"Answer","text":"Yes — brick-veneer family homes are the dominant Grovedale job. We use masonry-grade primers, flexible exterior caulks for the gaps around windows and eaves, and Dulux Weathershield acrylic membrane systems built for these substrates."}},
   {"@type":"Question","name":"How much does it cost to repaint a Grovedale family home?","acceptedAnswer":{"@type":"Answer","text":"A full exterior repaint of a single-storey brick-veneer family home in Grovedale typically ranges from $7,000 to $13,000 depending on size, condition and prep. A full interior repaint of a 3-4 bedroom home generally falls between $5,000 and $9,000. All quotes are free on-site."}},
   {"@type":"Question","name":"Do you service all of Grovedale including the newer estates?","acceptedAnswer":{"@type":"Answer","text":"Yes. We cover all of Grovedale 3216, from the older streets near Reserve Road and Burdoo Drive through to the newer estates on the southern edge approaching Mount Duneed."}},
-  {"@type":"Question","name":"How long does it take to paint a typical Grovedale home?","acceptedAnswer":{"@type":"Answer","text":"A full interior repaint of a 3-bedroom home usually takes 4-7 working days. A full exterior repaint of a single-storey brick-veneer or render home generally takes 5-9 working days with proper prep."}},
-  {"@type":"Question","name":"Do you offer free quotes in Grovedale?","acceptedAnswer":{"@type":"Answer","text":"Yes. All quotes in Grovedale are free and provided on-site. We assess condition, substrate, scope and access in person, then send a written quote — typically within 24 hours."}}
+  {"@type":"Question","name":"How long does it take to paint a typical Grovedale home?","acceptedAnswer":{"@type":"Answer","text":"A full interior repaint of a 3-bedroom home usually takes 2-5 working days. A full exterior repaint of a single-storey brick-veneer or render home generally takes 5-9 working days with proper prep."}},
+  {"@type":"Question","name":"Do you offer free quotes in Grovedale?","acceptedAnswer":{"@type":"Answer","text":"Yes. All quotes in Grovedale are free and provided on-site. We assess condition, substrate, scope and access in person, then send a written quote — typically within 1–2 business days."}},
+  {"@type":"Question","name":"What is included in a house painting quote in Grovedale?","acceptedAnswer":{"@type":"Answer","text":"Our written painting quotes identify the surfaces to be painted, preparation requirements, paint products and finishes, the proposed number of coats, and any repairs or exclusions relevant to the project. We assess these details during the site visit so you can compare the scope of work before proceeding."}},
+  {"@type":"Question","name":"Do I need to move furniture before interior painting?","acceptedAnswer":{"@type":"Answer","text":"Please let us know which rooms you would like painted and whether they contain heavy or delicate furniture. We can discuss access, furniture protection and the preparation needed during your quote, so you know what to arrange before painting begins."}},
+  {"@type":"Question","name":"How do I know whether my exterior needs repainting?","acceptedAnswer":{"@type":"Answer","text":"Peeling or flaking paint, faded colour, cracking around painted trims and exposed timber can indicate that maintenance is needed. An on-site inspection helps determine whether the surface needs cleaning, minor repairs, spot preparation or a more extensive repaint."}}
 ]}
 </script>
   <script type="text/javascript">
@@ -436,7 +455,7 @@
       0431 261 281
     </a>
     <div class="nav-divider"></div>
-    <a href="../contact-us.html" class="btn-appointment">Book an Appointment <i class="fa-solid fa-arrow-up-right"></i></a>
+    <a href="../contact-us.html" class="btn-appointment">Submit an Enquiry <i class="fa-solid fa-arrow-up-right"></i></a>
   </div>
 </nav>
 
@@ -455,7 +474,7 @@
     <li><a href="../projects.html">Projects</a></li>
     <li><a href="../areas-of-service.html">Areas of Service</a></li>
     <li><a href="../blogs.html">Blogs</a></li>
-    <li><a href="../contact-us.html" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open');" style="color:#e8762d; font-weight:600;">Book an Appointment</a></li>
+    <li><a href="../contact-us.html" onclick="document.querySelector('.mobile-menu-overlay').classList.remove('open');" style="color:#e8762d; font-weight:600;">Submit an Enquiry</a></li>
   </ul>
 </div>
 
@@ -528,8 +547,8 @@
       <i class="fa-solid fa-location-dot"></i>
       <span>Servicing Grovedale &middot; 3216</span>
     </div>
-    <h1 class="service-hero-heading">Trusted painters for <span class="text-accent">Grovedale's</span> family homes.</h1>
-    <p class="service-hero-sub">From brick-veneer 80s family homes around Burdoo Drive to newer estates on Grovedale's southern edge — we know how to repaint the suburb's full range of housing stock.</p>
+    <h1 class="service-hero-heading">House Painters in <span class="text-accent">Grovedale</span> for Interior &amp; Exterior Painting</h1>
+    <p class="service-hero-sub">Painters of Geelong provides interior and exterior house painting, fence painting, deck staining and surface preparation in Grovedale. Whether you're refreshing a single room or repainting your home, our team helps you choose suitable finishes, prepares the surfaces and delivers a clean, professional result.</p>
     <div class="service-hero-ctas">
       <a href="../contact-us.html" class="btn-primary-hero">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
       <a href="tel:0431261281" class="btn-secondary-hero"><i class="fa-solid fa-phone"></i> Call 0431 261 281</a>
@@ -542,7 +561,7 @@
       <li><i class="fa-solid fa-check"></i> 5-star Hipages reviews</li>
     </ul>
     <div class="hero-stats-row">
-      <div class="hero-stat-tile"><div class="num">25+</div><div class="label">years painting<br>Grovedale homes</div></div>
+      <div class="hero-stat-tile"><div class="num">25+</div><div class="label">years of combined painting experience, serving homes across Grovedale and greater Geelong</div></div>
       <div class="hero-stat-tile"><div class="num">300+</div><div class="label">repaints across<br>Geelong &amp; Bellarine</div></div>
       <div class="hero-stat-tile"><div class="num">10-year</div><div class="label">Dulux<br>warranty*</div></div>
     </div>
@@ -560,7 +579,7 @@
       <div class="trust-item"><i class="fa-solid fa-award"></i><span><strong>Dulux</strong> Accredited</span></div>
       <div class="trust-item"><i class="fa-solid fa-medal"></i><span><strong>10-year</strong> Dulux warranty*</span></div>
       <div class="trust-item"><i class="fa-solid fa-star"></i><span><strong>5-star</strong> Hipages reviews</span></div>
-      <div class="trust-item"><i class="fa-regular fa-clock"></i><span><strong>Free quotes</strong> in 24hrs</span></div>
+      <div class="trust-item"><i class="fa-regular fa-clock"></i><span><strong>Free quotes</strong> in 1&ndash;2 business days</span></div>
     </div>
     <p style="max-width:1240px;margin:16px auto 0;font-size:12px;line-height:1.5;color:#777;">*Dulux warranty applies to eligible products and systems applied to Dulux specifications. Terms and conditions apply. Your rights under the Australian Consumer Law continue to apply.</p>
   </section>
@@ -580,6 +599,18 @@
     </div>
   </section>
 
+  <!-- LOCAL PROJECT -->
+  <section class="local-project-section">
+    <div class="local-project-card">
+      <img src="../images/projects/charcoal-timber-fence-painting-grovedale.webp" width="573" height="769" alt="Charcoal timber paling fence painted along a backyard garden beside a brick home in Grovedale" loading="lazy" decoding="async" />
+      <div class="local-project-body">
+        <h2>Our Painting Work in <span class="text-accent">Grovedale</span></h2>
+        <p>See an example of our completed painting work in Grovedale. Our charcoal timber fence painting project shows how a fresh exterior finish can transform a backyard boundary and complement the surrounding home and garden.</p>
+        <a href="../projects/charcoal-timber-fence-painting-grovedale.html" class="btn-primary-hero">View Our Grovedale Fence Painting Project <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICES DEEP -->
   <section class="services-deep-section" id="services">
     <header class="services-deep-head">
@@ -587,8 +618,8 @@
         <i class="fa-solid fa-paintbrush"></i>
         <span>What we paint</span>
       </div>
-      <h2>Our painting services in <span class="text-accent">Grovedale</span>.</h2>
-      <p>From brick-veneer family-home repaints to Grovedale Hub commercial fitouts, deck restoration to render refreshes — five service categories sized for Grovedale's mix of 70s-90s suburban homes and newer estate builds.</p>
+      <h2>Our Painting Services in <span class="text-accent">Grovedale</span></h2>
+      <p>From refreshing your home's interiors to protecting exterior surfaces, Painters of Geelong provides residential and commercial painting services throughout Grovedale. Whether you need a single room repainted, a complete exterior refresh or outdoor timber maintenance, explore our services to find the right solution for your property.</p>
     </header>
 
     <div class="cat-nav-wrap" role="navigation" aria-label="Service categories">
@@ -607,16 +638,8 @@
           <h3 class="cat-title">Interior House Painting <span class="text-accent">in Grovedale</span></h3>
         </div>
       </div>
-      <p class="cat-intro">Interior painters Grovedale families rely on for modern suburban work. Plasterboard, square-set cornices and busy family routines handled with low-VOC paints, careful cut-ins around modern downlights, fans and ceiling features, and a fast clean turnaround that suits working households across 80s–90s brick veneers through to newer estate builds.</p>
-      <h4 class="cat-sub-header">Specialised interior work</h4>
-      <div class="sub-services-grid">
-        <div class="sub-card"><h5>Wall painting</h5><p>Smooth, low-VOC wall finishes for Grovedale's plasterboard and gyprock walls. Skim-coat repair around old picture hooks and patches, with hard-wearing Dulux Wash&Wear matte and low-sheen finishes.</p></div>
-        <div class="sub-card"><h5>Ceiling painting</h5><p>Square-set and cove cornice ceilings in Grovedale's brick-veneer and modern homes. Low-spatter rollers, dedicated ceiling-white systems, careful cut-in around vents, fans and downlights.</p></div>
-        <div class="sub-card"><h5>Door and trim painting</h5><p>Hollow-core and solid-timber doors, modern architraves and skirting common across Grovedale's 80s-90s homes. Sanded, primed, finished in enamel or low-sheen acrylic for hard-wearing family-home durability.</p></div>
-        <div class="sub-card"><h5>Feature walls</h5><p>Modern feature walls — deep blues, charcoals, terracottas, warm greens — that work with Grovedale's contemporary suburban interiors. Sample patches and colour consultation before commit.</p></div>
-        <div class="sub-card"><h5>Apartment painting</h5><p>Quick-turnaround interior repaints for the unit complexes and townhouses around Grovedale Hub and the newer estate streets. Move-in-ready finishes, weekend scheduling, minimal disruption.</p></div>
-      </div>
-      <a href="../services/interior-house-painters.html" class="cat-cta">View all interior painting services <i class="fa-solid fa-arrow-right"></i></a>
+      <p class="cat-intro">Give tired walls, ceilings and trims a fresh, updated finish with professional interior house painting in Grovedale. We handle single-room refreshes, complete home repaints, doors, skirting boards and feature walls. From repairing minor surface imperfections to selecting washable, low-VOC paint finishes, our approach focuses on achieving attractive, practical results for everyday living.</p>
+      <a href="../services/interior-house-painters.html" class="cat-cta">Explore Our Interior House Painting Services <i class="fa-solid fa-arrow-right"></i></a>
     </article>
     <article class="service-category" id="exterior">
       <div class="cat-head-row">
@@ -626,16 +649,8 @@
           <h3 class="cat-title">Exterior House Painting <span class="text-accent">in Grovedale</span></h3>
         </div>
       </div>
-      <p class="cat-intro">Exterior painters Grovedale homeowners trust across older brick-veneer and newer estate builds. 70s–90s suburban stock and modern render-and-brick newer homes — full envelope handled: brick, render, weatherboard accents, fences, garage doors, eaves and fascias with Dulux Weathershield as standard.</p>
-      <h4 class="cat-sub-header">Specialised exterior work</h4>
-      <div class="sub-services-grid">
-        <div class="sub-card"><h5>Weatherboard painting</h5><p>Repainting timber weatherboards on Grovedale's older homes and accent weatherboard sections on brick-veneer properties. Sanding, primer, gap-filling and two coats of Dulux Weathershield.</p></div>
-        <div class="sub-card"><h5>Brick painting</h5><p>Painting brick and rendered exteriors on Grovedale's 80s-90s brick-veneer homes and newer render builds. Masonry-grade primers and acrylic membrane systems that bond to porous brick and modern bagged finishes.</p></div>
-        <div class="sub-card"><h5>Fence painting</h5><p>Restoring picket, paling, slatted and modern composite-trim fences across Grovedale's family streets. Heritage or contemporary palettes; oil-based or acrylic finishes matched to substrate.</p></div>
-        <div class="sub-card"><h5>Garage doors and trims</h5><p>Repainting tilt-doors, panel-lift doors and modern composite garage doors common in Grovedale's brick-veneer homes. Plus eaves, fascias, gutters, downpipes and trims.</p></div>
-        <div class="sub-card"><h5>Outdoor facades</h5><p>Full-house external repaints — brick, render, weatherboard accents, trims, eaves and fences treated as one cohesive job with a single coordinated colour palette.</p></div>
-      </div>
-      <a href="../services/exterior-house-painters.html" class="cat-cta">View all exterior painting services <i class="fa-solid fa-arrow-right"></i></a>
+      <p class="cat-intro">Refresh your home's appearance and protect its exterior surfaces with professional painting suited to Grovedale properties. We paint weatherboards, rendered walls, suitable brick surfaces, fences, garage doors, eaves and trims. Our team assesses existing paint conditions, prepares surfaces and selects appropriate exterior paint systems to achieve a durable finish suited to local weather conditions.</p>
+      <a href="../services/exterior-house-painters.html" class="cat-cta">Explore Our Exterior House Painting Services <i class="fa-solid fa-arrow-right"></i></a>
     </article>
     <article class="service-category" id="commercial">
       <div class="cat-head-row">
@@ -645,16 +660,8 @@
           <h3 class="cat-title">Commercial Painting <span class="text-accent">in Grovedale</span></h3>
         </div>
       </div>
-      <p class="cat-intro">Commercial painters Grovedale businesses rely on around Grovedale Hub and Burdoo Drive. Scheduled around your trade with after-hours, weekend or split-shift windows, brand-colour matching, high-traffic finishes for retail and café tenancies, and a single point of contact.</p>
-      <h4 class="cat-sub-header">Specialised commercial work</h4>
-      <div class="sub-services-grid">
-        <div class="sub-card"><h5>Office painting</h5><p>Office and consulting-room repaints for the professional and allied-health offices around Grovedale Hub and Burdoo Drive. After-hours scheduling to avoid client and staff disruption.</p></div>
-        <div class="sub-card"><h5>Shop and retail painting</h5><p>Shopfronts, retail interiors, fitting rooms and display walls for Grovedale Hub and surrounding retail. Brand-colour matching, high-traffic-grade finishes, signage panel painting.</p></div>
-        <div class="sub-card"><h5>Warehouse painting</h5><p>Larger commercial premises and warehousing on Grovedale's industrial edges. Line-marking, safety colours, epoxy floors, high-bay walls and ceilings.</p></div>
-        <div class="sub-card"><h5>Restaurant and café painting</h5><p>Café and restaurant fitouts around Grovedale Hub. Low-VOC, food-safe systems with overnight or split-shift scheduling for quick turnaround.</p></div>
-        <div class="sub-card"><h5>Strata &amp; property management</h5><p>Common-area, hallway, foyer and stairwell painting for Grovedale's apartment buildings, townhouse complexes and strata properties. Owners-corporation invoicing, scheduled maintenance cycles.</p></div>
-      </div>
-      <a href="../services/commercial-building-painters.html" class="cat-cta">View all commercial painting services <i class="fa-solid fa-arrow-right"></i></a>
+      <p class="cat-intro">Keep your business premises looking professional with commercial painting services for offices, retail shops, hospitality venues and other commercial properties in Grovedale. We handle interior and exterior painting, surface preparation and suitable finishes for high-traffic areas. Our team discusses project requirements and scheduling to help minimise disruption to your business operations.</p>
+      <a href="../services/commercial-building-painters.html" class="cat-cta">Explore Our Commercial Painting Services <i class="fa-solid fa-arrow-right"></i></a>
     </article>
     <article class="service-category" id="deck-timber">
       <div class="cat-head-row">
@@ -664,16 +671,8 @@
           <h3 class="cat-title">Deck &amp; Timber Staining <span class="text-accent">in Grovedale</span></h3>
         </div>
       </div>
-      <p class="cat-intro">Deck staining Grovedale homeowners trust for backyard and alfresco work. Hardwood decks behind older brick veneers, treated-pine pergolas in 80s yards, newer alfresco timber on modern estate builds — sanded, repaired and sealed with weather-grade stains in contemporary or heritage tones.</p>
-      <h4 class="cat-sub-header">Specialised timber work</h4>
-      <div class="sub-services-grid">
-        <div class="sub-card"><h5>Deck staining</h5><p>Stripping, sanding and re-staining hardwood decks on Grovedale's family homes — including the elevated rear decks behind older brick veneers. Oil-based and water-based stains in modern or heritage tones.</p></div>
-        <div class="sub-card"><h5>Timber sealing</h5><p>Sealing and protecting exposed timber — handrails, balustrades, pergola beams, feature posts — with UV-resistant, weather-grade clear sealers or lightly-tinted finishes.</p></div>
-        <div class="sub-card"><h5>Pergola painting</h5><p>Painting and staining outdoor pergolas, alfresco structures and patio posts on Grovedale homes. Treated-pine, hardwood and modern composite substrates handled.</p></div>
-        <div class="sub-card"><h5>Fence staining</h5><p>Re-staining hardwood paling, slatted and feature fences. Pre-treatment, oil-based or water-based stain systems, and gap-and-knot sealing to prevent moisture penetration.</p></div>
-        <div class="sub-card"><h5>Timber restoration</h5><p>Bringing back grey, weathered, water-damaged or paint-failed timber surfaces. Hand-sanding, gap-filling, structural repair where needed, then seal-and-finish.</p></div>
-      </div>
-      <a href="../services/deck-and-timber-staining.html" class="cat-cta">View all deck & timber services <i class="fa-solid fa-arrow-right"></i></a>
+      <p class="cat-intro">Restore the appearance of weathered outdoor timber with professional deck and timber staining in Grovedale. We work on timber decks, fences, pergolas and other outdoor timber features, preparing surfaces before applying suitable stains or protective finishes. Our approach helps maintain the timber's appearance while providing protection against everyday wear and weather exposure.</p>
+      <a href="../services/deck-and-timber-staining.html" class="cat-cta">Explore Our Deck &amp; Timber Staining Services <i class="fa-solid fa-arrow-right"></i></a>
     </article>
     <article class="service-category" id="surface-prep">
       <div class="cat-head-row">
@@ -683,16 +682,8 @@
           <h3 class="cat-title">Surface Prep &amp; Pressure Cleaning <span class="text-accent">in Grovedale</span></h3>
         </div>
       </div>
-      <p class="cat-intro">Pressure washing Grovedale homes is the foundation of every quality repaint. Modern paint systems still need solid prep — pressure cleaning, sanding, priming and minor repairs handled by the same crew that does the painting, with no handoffs and no gaps in the warranty foundation.</p>
-      <h4 class="cat-sub-header">Specialised prep work</h4>
-      <div class="sub-services-grid">
-        <div class="sub-card"><h5>Pressure washing</h5><p>High-pressure cleaning of brick facades, rendered walls, weatherboards, eaves, paths, decks and driveways. Removes lichen, oxidised paint, dust and biological growth before priming.</p></div>
-        <div class="sub-card"><h5>Surface cleaning</h5><p>Detail cleaning of substrates pressure-washing can't reach — interior plaster, cornices, mouldings, timber and metal hardware. Sugar-soap and TSP washes where needed.</p></div>
-        <div class="sub-card"><h5>Sanding and priming</h5><p>Hand-sanding, mechanical sanding and full primer systems matched to substrate — oil-based timber primers, masonry sealers, stain blockers and bonding primers.</p></div>
-        <div class="sub-card"><h5>Crack and hole filling</h5><p>Filling cracks, gaps, splits, nail holes and damage in timber, plaster and render — flexible exterior caulks, two-pack timber fillers and plaster patch.</p></div>
-        <div class="sub-card"><h5>Minor repairs and patching</h5><p>Replacing damaged timber sections, repairing rotten weatherboard ends, patching plaster and re-securing loose trims before painting. Saves a separate carpenter call-out.</p></div>
-      </div>
-      <a href="../services/pressure-washing-surface-prep.html" class="cat-cta">View all surface prep services <i class="fa-solid fa-arrow-right"></i></a>
+      <p class="cat-intro">A lasting paint finish starts with properly prepared surfaces. Our surface preparation and pressure cleaning services in Grovedale include appropriate cleaning, sanding, priming, crack filling and minor surface repairs. We assess the condition of walls, timber, masonry and other surfaces before painting to help ensure better paint adhesion and a smoother, more consistent finish.</p>
+      <a href="../services/pressure-washing-surface-prep.html" class="cat-cta">Explore Our Surface Preparation &amp; Pressure Cleaning Services <i class="fa-solid fa-arrow-right"></i></a>
     </article>
   </section>
 
@@ -703,12 +694,12 @@
         <i class="fa-solid fa-map-location-dot"></i>
         <span>Why painting Grovedale is different</span>
       </div>
-      <h2>Three things <span class="text-accent">Grovedale homes</span> teach us every job.</h2>
+      <h2>Painting Considerations for <span class="text-accent">Grovedale Homes</span></h2>
     </div>
     <div class="context-grid">
-      <div class="context-card"><div class="context-numeral">01</div><h3>Brick veneer dominates</h3><p>Grovedale's housing stock is largely 1970s-90s brick veneer with weatherboard accents, mixed with newer 2000s-2010s render builds and recent estate homes. We use masonry-grade primers and acrylic membrane systems matched to each substrate's age.</p></div>
-      <div class="context-card"><div class="context-numeral">02</div><h3>Family-scale jobs</h3><p>Most Grovedale work is family homes with kids, working parents and full schedules. We size the crew, stage the rooms, and work around school drop-offs so the household stays functional throughout the job.</p></div>
-      <div class="context-card"><div class="context-numeral">03</div><h3>Local crew, 8 minutes away</h3><p>Our Geelong base is about 8 minutes' drive from Grovedale — same-day site visits, fast free quotes, and quick turnaround if any minor touch-ups are needed after the job.</p></div>
+      <div class="context-card"><div class="context-numeral">01</div><h3>Existing paint and surface condition</h3><p>Older painted surfaces may need cleaning, filling, sanding or priming before repainting. We check the existing paint for flaking, cracking, chalking and stains during the quote, so the preparation your home needs is set out before work begins.</p></div>
+      <div class="context-card"><div class="context-numeral">02</div><h3>Interior painting in occupied homes</h3><p>Before painting starts, furniture is moved away from the walls and covered, floors are protected with drop sheets, and fittings and edges are masked. We agree the order of rooms with you, so the rest of the house stays usable while the work progresses.</p></div>
+      <div class="context-card"><div class="context-numeral">03</div><h3>Exterior paint selection</h3><p>Timber, rendered surfaces, exposed masonry and other materials each need a compatible primer and exterior paint system. We look at the surface, its existing coating and how exposed it is to sun and weather, then select products to suit, following the manufacturer's specifications.</p></div>
     </div>
   </section>
 
@@ -716,6 +707,8 @@
   <!-- TESTIMONIAL -->
   <section class="testimonial-section">
     <div class="testimonial-inner">
+      <h2 class="testimonial-heading">What Our Customers Say About <span class="text-accent">Painters of Geelong</span></h2>
+      <p class="testimonial-intro">See what homeowners across Geelong and surrounding suburbs say about their experiences with Painters of Geelong. From interior and exterior painting to property improvements, their feedback offers insight into our workmanship, communication and overall service.</p>
       <div class="testimonial-quote-mark">&ldquo;</div>
       <blockquote class="testimonial-text">Excellent prompt service and a great job. Very professional.</blockquote>
       <div class="testimonial-attr"><strong>Campbell L.</strong><span class="sep"></span>Homeowner — Breakwater VIC</div>
@@ -764,7 +757,7 @@
           <i class="fa-solid fa-plus"></i>
         </h3>
         <div class="faq-answer">
-          <p>A full interior repaint of a 3-bedroom home usually takes <strong>4-7 working days</strong>. A full exterior repaint of a single-storey brick-veneer or render home generally takes <strong>5-9 working days</strong> with proper prep.</p>
+          <p>A full interior repaint of a 3-bedroom home usually takes <strong>2-5 working days</strong>. A full exterior repaint of a single-storey brick-veneer or render home generally takes <strong>5-9 working days</strong> with proper prep.</p>
         </div>
       </div>
       <div class="faq-item">
@@ -773,7 +766,34 @@
           <i class="fa-solid fa-plus"></i>
         </h3>
         <div class="faq-answer">
-          <p>Yes. All quotes in Grovedale are free and provided on-site. We assess condition, substrate, scope and access in person, then send a written quote &mdash; typically within 24 hours. Call <a href="tel:0431261281">0431 261 281</a> or use our online form to book.</p>
+          <p>Yes. All quotes in Grovedale are free and provided on-site. We assess condition, substrate, scope and access in person, then send a written quote &mdash; typically within 1&ndash;2 business days. Call <a href="tel:0431261281">0431 261 281</a> or use our online form to book.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What is included in a house painting quote in Grovedale?
+          <i class="fa-solid fa-plus"></i>
+        </h3>
+        <div class="faq-answer">
+          <p>Our written painting quotes identify the surfaces to be painted, preparation requirements, paint products and finishes, the proposed number of coats, and any repairs or exclusions relevant to the project. We assess these details during the site visit so you can compare the scope of work before proceeding.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Do I need to move furniture before interior painting?
+          <i class="fa-solid fa-plus"></i>
+        </h3>
+        <div class="faq-answer">
+          <p>Please let us know which rooms you would like painted and whether they contain heavy or delicate furniture. We can discuss access, furniture protection and the preparation needed during your quote, so you know what to arrange before painting begins.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How do I know whether my exterior needs repainting?
+          <i class="fa-solid fa-plus"></i>
+        </h3>
+        <div class="faq-answer">
+          <p>Peeling or flaking paint, faded colour, cracking around painted trims and exposed timber can indicate that maintenance is needed. An on-site inspection helps determine whether the surface needs cleaning, minor repairs, spot preparation or a more extensive repaint.</p>
         </div>
       </div>
     </div>
@@ -814,7 +834,7 @@
         <a href="../contact-us.html" class="btn-cta">Get a Free Quote <i class="fa-solid fa-arrow-up-right"></i></a>
       </div>
       <div class="cta-secondary">
-        <p>Call us on 0431 261 281 or book a free, no-obligation on-site quote. Most quotes returned within 24 hours.</p>
+        <p>Call us on 0431 261 281 or book a free, no-obligation on-site quote. Most quotes returned within 1&ndash;2 business days.</p>
         <a href="tel:0431261281" class="btn-call"><i class="fa-solid fa-phone"></i> 0431 261 281</a>
       </div>
     </div>
