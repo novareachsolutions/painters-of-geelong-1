@@ -342,6 +342,8 @@
     .faq-answer { padding: 0 26px; max-height: 0; overflow: hidden; transition: max-height .4s ease, padding .4s ease; }
     .faq-item.open .faq-answer { max-height: 400px; padding: 0 26px 22px; }
     .faq-answer p { font-size: 14.5px; color: #555; line-height: 1.7; margin: 0; }
+    .faq-answer p a.faq-link { color: #e8762d; font-weight: 600; text-decoration: none; }
+    .faq-answer p a.faq-link:hover { text-decoration: underline; }
     .text-accent { color: #e8762d; }
 
     /* FOOTER */
